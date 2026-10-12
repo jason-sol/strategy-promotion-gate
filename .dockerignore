@@ -1,0 +1,13 @@
+.git
+.venv
+.env*
+*.csv
+*.png
+state.json
+HALT
+.pytest_cache
+__pycache__
+.remember
+.claude
+tasks
+tests

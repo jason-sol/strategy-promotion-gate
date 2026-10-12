@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: pytest
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1  # exact tag: this action publishes no moving major
+        with:
+          enable-cache: true
+      # The suite is network-free and key-free by design, so no secrets are needed.
+      - run: uv sync --frozen
+      - run: uv run pytest -q
+
+  lint:
+    name: ruff
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1  # exact tag: this action publishes no moving major
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      # `ruff format --check` is deliberately absent: the tree predates the
+      # formatter and adopting it would rewrite 47 of 58 files in one go.
+      - run: uv run ruff check .

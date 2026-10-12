@@ -1,0 +1,54 @@
+[project]
+name = "strategy-promotion-gate"
+version = "0.1.0"
+description = "Multi-instrument Alpaca paper-trading bot: mean reversion, momentum breakout, trend following"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "alpaca-py>=0.42",
+    "numpy>=2.1",
+    "pandas>=2.2",
+    "python-dotenv>=1.0",
+    "matplotlib>=3.9",
+    "tzdata>=2024.1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.14"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py312"
+# Documents the code's real convention; E501 is not selected, so this gates
+# nothing until a formatter or E501 is deliberately adopted.
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E4", "E7", "E9", "F", "UP", "I", "BLE", "DTZ", "FURB",
+    "RUF007", "RUF059", "S102",
+    # Deliberately absent, each against a standing convention: PLR0124 (`x != x`
+    # is the NaN test in the pricing and research code), RUF012 (class-level CSV
+    # header lists are read-only by convention), S110 (one best-effort command
+    # step swallows failures on purpose), SIM115 (the HALT file is read one-shot).
+]
+# Written against the select above: under ruff's narrow defaults (E4/E7/E9/F)
+# each of those entries would be inert.
+ignore = [
+    "UP017",   # timezone.utc is the codebase-wide spelling; the datetime.UTC alias buys nothing
+    "I001",    # import order is hand-grouped; enforcing it would rewrite every module
+    "BLE001",  # broad except is deliberate: a broker or data failure must not kill the trading loop
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "DTZ001",  # fixtures construct naive datetimes deliberately
+    "F401",    # unused imports in test scaffolding are not worth churn
+    "F841",    # ditto unused locals bound for readability in arrange blocks
+    "FURB167", # re flag aliases spelled out long-hand in regex fixtures
+    "RUF007",  # zip-over-pairs reads clearer than itertools.pairwise in an assertion
+    "RUF059",  # unused unpacked values name what a tuple return contains
+    "S102",    # one test exercises exec() by design
+]

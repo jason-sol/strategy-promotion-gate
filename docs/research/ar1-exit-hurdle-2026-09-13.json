@@ -1,0 +1,891 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-09-16T01:31:50.509427+00:00",
+  "as_of": "2026-09-13",
+  "question": "Kaminski & Lo (2014) sufficient condition rho >= SR at a common sampling frequency: can a path-dependent exit rule add value?",
+  "feed": "sip",
+  "risk_free": {
+    "annual": 0.0,
+    "daily": 0.0,
+    "basis": "annual / TRADING_DAYS_PER_YEAR (252, the bot/metrics.py convention for every instrument, crypto included)",
+    "sensitivity_annual": [
+      0.04
+    ],
+    "note": "K&L's r_f is the return earned WHILE STOPPED OUT: their policy switches into the risk-free asset, so pi = mu - r_f. bot.portfolio.SimAccount.equity is cash plus marks and cash never accrues, and the live account holds idle cash at zero, so r_f = 0 is the rate this lineup actually earns while flat. Entries under rf_sensitivity re-price the same rho against a cash rate the bot does not earn; they are a what-if, not the verdict."
+  },
+  "annualization": {
+    "trading_days_per_year": 252,
+    "note": "bot/metrics.py applies sqrt(252) to every instrument, crypto included; followed here so the numbers are comparable with the validation artifacts. BTC's annualized figure is therefore understated against a sqrt(365) convention."
+  },
+  "method": {
+    "backtest": "bot.backtest.Backtester, one instrument per run, full window, halt_enabled=False \u2014 the bot.validation._run_returns path",
+    "daily_returns": "bot.validation._daily_returns (resample 1D, last, pct_change)",
+    "rho": "standard lag-1 sample autocorrelation, single mean and denominator; SE = 1/sqrt(n), Bartlett under the white-noise null",
+    "episode_counts": "trades counts closed round-trips; episodes counts holding episodes, which exceeds trades by one when a position is still open at the end of the window",
+    "in_trade_sr_identity": "flat days are exact zeros, so SR_in_trade is SR_all_days / sqrt(share_in_trade) up to the entry-bar residual: series (ii) restates series (i) rather than confirming it",
+    "in_trade_definition": "days a position was open entering the day; the entry bar is excluded because its return is entry slippage only. rho_hat is the sample correlation of (x_t, x_t+1) over consecutive pairs WITHIN holding episodes, with numerator and denominator over the same paired observations; rho_naive_concat is the same series treated as one unbroken run, for comparison.",
+    "ljung_box": "closed form Q = n(n+2)rho^2/(n-1), chi2(1); statsmodels is not a dependency"
+  },
+  "sleeves": [
+    {
+      "symbol": "SPY",
+      "strategy": "rsi_mean_reversion",
+      "asset_class": "us_equity",
+      "params": {
+        "rsi_period": 2,
+        "entry_below": 10,
+        "regime_period": 200,
+        "exit_period": 5,
+        "stop_mult": 3.0,
+        "vol_target": true
+      },
+      "slippage_pct": 0.0001,
+      "timeframe_minutes": 1440,
+      "bars": {
+        "n": 2690,
+        "start": "2016-01-04",
+        "end": "2026-09-15"
+      },
+      "trades": 92,
+      "episodes": 92,
+      "position_open_at_end": false,
+      "days_in_trade": 269,
+      "days_flat": 2420,
+      "share_of_days_in_trade": 0.10003718854592786,
+      "mean_episode_days": 2.9239130434782608,
+      "max_abs_return_on_untraded_days": 0.0,
+      "in_trade_sr_identity": {
+        "sr_daily_all_days_total": 0.0508972719655333,
+        "share_of_days_in_trade": 0.10003718854592786,
+        "sr_daily_in_trade_implied": 0.16092138671960338,
+        "sr_daily_in_trade_actual": 0.1660989088893483,
+        "relative_deviation": 0.03217423286791877,
+        "note": "SR_in_trade ~= SR_all_days / sqrt(share_in_trade) because flat days are exact zeros; the residual is the entry-bar days, which carry slippage but are excluded from the in-trade series."
+      },
+      "series": {
+        "strategy_all_days": {
+          "label": "strategy_all_days",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 6.714644822466761e-05,
+          "std_daily": 0.0013192543653447273,
+          "rho_hat": -0.09057638297754665,
+          "rho_se": 0.01928433196350193,
+          "rho_z": -4.696889845547881,
+          "rho_sign": "negative",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 22.08539562101126,
+          "ljung_box_p": 2.6078626539036495e-06,
+          "sr_daily_total": 0.0508972719655333,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.0508972719655333,
+          "sr_annual": 0.8079691441945246,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.14147365494307995,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": -0.06942081293137117,
+              "sr_annual": -1.1020212409700698,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.02115557004617548
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        },
+        "strategy_in_trade": {
+          "label": "strategy_in_trade",
+          "n": 269,
+          "n_pairs": 177,
+          "mean_daily": 0.0006854308433982476,
+          "std_daily": 0.004126642661180078,
+          "rho_hat": -0.16904890483252477,
+          "rho_se": 0.07495316889958614,
+          "rho_z": -2.255393698684008,
+          "rho_sign": "negative",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 5.173017697691726,
+          "ljung_box_p": 0.022940331951556526,
+          "sr_daily_total": 0.1660989088893483,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.1660989088893483,
+          "sr_annual": 2.636738435762348,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.3351478137218731,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.12763418786483213,
+              "sr_annual": 2.0261299192802635,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.29668309269735693
+            }
+          ],
+          "n_paired_observations": 251,
+          "rho_naive_concat": -0.03965360958647918,
+          "span": {
+            "start": "2016-11-02",
+            "end": "2026-09-11"
+          }
+        },
+        "underlying_close_to_close": {
+          "label": "underlying_close_to_close",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 0.0006141752499178307,
+          "std_daily": 0.011013151169294426,
+          "rho_hat": -0.11848865305758577,
+          "rho_se": 0.01928433196350193,
+          "rho_z": -6.144296482856691,
+          "rho_sign": "negative",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 37.794513621108095,
+          "ljung_box_p": 7.860252095381762e-10,
+          "sr_daily_total": 0.05576744026089481,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.05576744026089481,
+          "sr_annual": 0.885280669109872,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.17425609331848058,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.04135465718998668,
+              "sr_annual": 0.6564848308742038,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.15984331024757245
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        }
+      }
+    },
+    {
+      "symbol": "QQQ",
+      "strategy": "rsi_mean_reversion",
+      "asset_class": "us_equity",
+      "params": {
+        "rsi_period": 2,
+        "entry_below": 10,
+        "regime_period": 200,
+        "exit_period": 5,
+        "stop_mult": 3.0
+      },
+      "slippage_pct": 0.0001,
+      "timeframe_minutes": 1440,
+      "bars": {
+        "n": 2690,
+        "start": "2016-01-04",
+        "end": "2026-09-15"
+      },
+      "trades": 92,
+      "episodes": 93,
+      "position_open_at_end": true,
+      "days_in_trade": 347,
+      "days_flat": 2342,
+      "share_of_days_in_trade": 0.12904425436965414,
+      "mean_episode_days": 3.7311827956989245,
+      "max_abs_return_on_untraded_days": 0.0,
+      "in_trade_sr_identity": {
+        "sr_daily_all_days_total": 0.04472434622072807,
+        "share_of_days_in_trade": 0.12904425436965414,
+        "sr_daily_in_trade_implied": 0.12450152311557017,
+        "sr_daily_in_trade_actual": 0.12728383168272386,
+        "relative_deviation": 0.022347586579892536,
+        "note": "SR_in_trade ~= SR_all_days / sqrt(share_in_trade) because flat days are exact zeros; the residual is the entry-bar days, which carry slippage but are excluded from the in-trade series."
+      },
+      "series": {
+        "strategy_all_days": {
+          "label": "strategy_all_days",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 4.67323456287011e-05,
+          "std_daily": 0.0010448972333337854,
+          "rho_hat": -0.09910893610789209,
+          "rho_se": 0.01928433196350193,
+          "rho_z": -5.139350240157059,
+          "rho_sign": "negative",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 26.442399597353983,
+          "ljung_box_p": 2.715146968171663e-07,
+          "sr_daily_total": 0.04472434622072807,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.04472434622072807,
+          "sr_annual": 0.7099769858999878,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.14383328232862017,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": -0.10718548152733091,
+              "sr_annual": -1.7015167696681515,
+              "clears_hurdle": true,
+              "margin_rho_minus_sr": 0.008076545419438821
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        },
+        "strategy_in_trade": {
+          "label": "strategy_in_trade",
+          "n": 347,
+          "n_pairs": 254,
+          "mean_daily": 0.0003680896150055864,
+          "std_daily": 0.0028918803758446795,
+          "rho_hat": -0.09030152253982522,
+          "rho_se": 0.06262242910851495,
+          "rho_z": -1.4419996768784982,
+          "rho_sign": "negative",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 2.1039224744340443,
+          "ljung_box_p": 0.1469218072323011,
+          "sr_daily_total": 0.12728383168272386,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.12728383168272386,
+          "sr_annual": 2.020568187311348,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.2175853542225491,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.07239561429448013,
+              "sr_annual": 1.1492447486096835,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.16269713683430537
+            }
+          ],
+          "n_paired_observations": 336,
+          "rho_naive_concat": -0.02199600491935184,
+          "span": {
+            "start": "2016-08-19",
+            "end": "2026-09-15"
+          }
+        },
+        "underlying_close_to_close": {
+          "label": "underlying_close_to_close",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 0.0008199272264109082,
+          "std_daily": 0.014013126914379812,
+          "rho_hat": -0.11979198230432342,
+          "rho_se": 0.01928433196350193,
+          "rho_z": -6.211881362084261,
+          "rho_sign": "negative",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 38.630536429440845,
+          "ljung_box_p": 5.121140158268708e-10,
+          "sr_daily_total": 0.058511368049448384,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.058511368049448384,
+          "sr_annual": 0.9288391723740652,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.17830335035377182,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.04718412041228647,
+              "sr_annual": 0.7490246906534187,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.1669761027166099
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        }
+      }
+    },
+    {
+      "symbol": "BTC/USD",
+      "strategy": "trend_following",
+      "asset_class": "crypto",
+      "params": {
+        "fast_period": 20,
+        "slow_period": 100,
+        "trail_atr_mult": 3.0,
+        "allow_short": false
+      },
+      "slippage_pct": 0.0005,
+      "timeframe_minutes": 1440,
+      "bars": {
+        "n": 2085,
+        "start": "2021-01-01",
+        "end": "2026-09-16"
+      },
+      "trades": 8,
+      "episodes": 9,
+      "position_open_at_end": true,
+      "days_in_trade": 449,
+      "days_flat": 1635,
+      "share_of_days_in_trade": 0.2154510556621881,
+      "mean_episode_days": 49.888888888888886,
+      "max_abs_return_on_untraded_days": 0.0,
+      "in_trade_sr_identity": {
+        "sr_daily_all_days_total": 0.03506533046914916,
+        "share_of_days_in_trade": 0.2154510556621881,
+        "sr_daily_in_trade_implied": 0.07554463427177091,
+        "sr_daily_in_trade_actual": 0.07711527123508653,
+        "relative_deviation": 0.02079084740373849,
+        "note": "SR_in_trade ~= SR_all_days / sqrt(share_in_trade) because flat days are exact zeros; the residual is the entry-bar days, which carry slippage but are excluded from the in-trade series."
+      },
+      "series": {
+        "strategy_all_days": {
+          "label": "strategy_all_days",
+          "n": 2084,
+          "n_pairs": 2083,
+          "mean_daily": 6.750168878771873e-05,
+          "std_daily": 0.0019250264544663968,
+          "rho_hat": -0.09813590542754368,
+          "rho_se": 0.021905397716916176,
+          "rho_z": -4.479987384650835,
+          "rho_sign": "negative",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 20.099192804796687,
+          "ljung_box_p": 7.35277015935269e-06,
+          "sr_daily_total": 0.03506533046914916,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.03506533046914916,
+          "sr_annual": 0.5566448643699872,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.13320123589669283,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": -0.0473907616857805,
+              "sr_annual": -0.7523050191750199,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.05074514374176318
+            }
+          ],
+          "span": {
+            "start": "2021-01-02",
+            "end": "2026-09-16"
+          }
+        },
+        "strategy_in_trade": {
+          "label": "strategy_in_trade",
+          "n": 449,
+          "n_pairs": 440,
+          "mean_daily": 0.00031932712327452796,
+          "std_daily": 0.004140906439932716,
+          "rho_hat": -0.10927466490291829,
+          "rho_se": 0.047619047619047616,
+          "rho_z": -2.2947679629612843,
+          "rho_sign": "negative",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 5.301864276586892,
+          "ljung_box_p": 0.021302612452590356,
+          "sr_daily_total": 0.07711527123508653,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.07711527123508653,
+          "sr_annual": 1.2241669798399903,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.1863899361380048,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.03878304590406991,
+              "sr_annual": 0.615661767286627,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.1480577108069882
+            }
+          ],
+          "n_paired_observations": 449,
+          "rho_naive_concat": -0.11119165235749776,
+          "span": {
+            "start": "2022-03-31",
+            "end": "2026-09-16"
+          }
+        },
+        "underlying_close_to_close": {
+          "label": "underlying_close_to_close",
+          "n": 2084,
+          "n_pairs": 2083,
+          "mean_daily": 0.0009044060525024695,
+          "std_daily": 0.03003144330951421,
+          "rho_hat": -0.042171601267153226,
+          "rho_se": 0.021905397716916176,
+          "rho_z": -1.9251693948741557,
+          "rho_sign": "negative",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 3.7116150921895423,
+          "ljung_box_p": 0.054035081383112665,
+          "sr_daily_total": 0.03011530425565481,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.03011530425565481,
+          "sr_annual": 0.47806563430504656,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.07228690552280803,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.024829838715612926,
+              "sr_annual": 0.3941614700121314,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.06700143998276616
+            }
+          ],
+          "span": {
+            "start": "2021-01-02",
+            "end": "2026-09-16"
+          }
+        }
+      }
+    },
+    {
+      "symbol": "GLD",
+      "strategy": "trend_following",
+      "asset_class": "us_equity",
+      "params": {
+        "fast_period": 10,
+        "slow_period": 50,
+        "trail_atr_mult": 3.0,
+        "allow_short": false
+      },
+      "slippage_pct": 0.0001,
+      "timeframe_minutes": 1440,
+      "bars": {
+        "n": 2690,
+        "start": "2016-01-04",
+        "end": "2026-09-15"
+      },
+      "trades": 28,
+      "episodes": 28,
+      "position_open_at_end": false,
+      "days_in_trade": 827,
+      "days_flat": 1862,
+      "share_of_days_in_trade": 0.3075492748233544,
+      "mean_episode_days": 29.535714285714285,
+      "max_abs_return_on_untraded_days": 0.0,
+      "in_trade_sr_identity": {
+        "sr_daily_all_days_total": 0.03878088362848359,
+        "share_of_days_in_trade": 0.3075492748233544,
+        "sr_daily_in_trade_implied": 0.06992948770427063,
+        "sr_daily_in_trade_actual": 0.07038465114565474,
+        "relative_deviation": 0.006508891403709242,
+        "note": "SR_in_trade ~= SR_all_days / sqrt(share_in_trade) because flat days are exact zeros; the residual is the entry-bar days, which carry slippage but are excluded from the in-trade series."
+      },
+      "series": {
+        "strategy_all_days": {
+          "label": "strategy_all_days",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 7.006888194555667e-05,
+          "std_daily": 0.0018067892061668454,
+          "rho_hat": -0.0077722738190473695,
+          "rho_se": 0.01928433196350193,
+          "rho_z": -0.4030356785890947,
+          "rho_sign": "negative",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 0.16261905035663787,
+          "ljung_box_p": 0.6867565789946212,
+          "sr_daily_total": 0.03878088362848359,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.03878088362848359,
+          "sr_annual": 0.6156274422258227,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.046553157447530955,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": -0.049071179129246335,
+              "sr_annual": -0.7789808191001333,
+              "clears_hurdle": true,
+              "margin_rho_minus_sr": 0.04129890531019897
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        },
+        "strategy_in_trade": {
+          "label": "strategy_in_trade",
+          "n": 827,
+          "n_pairs": 799,
+          "mean_daily": 0.00022901357599060734,
+          "std_daily": 0.0032537431423320436,
+          "rho_hat": -0.018261723268844163,
+          "rho_se": 0.035355339059327376,
+          "rho_z": -0.5165195343820749,
+          "rho_sign": "negative",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 0.2677941531632252,
+          "ljung_box_p": 0.6048153258179332,
+          "sr_daily_total": 0.07038465114565474,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.07038465114565474,
+          "sr_annual": 1.1173216982846392,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.08864637441449891,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.021600788441485465,
+              "sr_annual": 0.34290188603453414,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.03986251171032963
+            }
+          ],
+          "n_paired_observations": 825,
+          "rho_naive_concat": -0.004068507523054699,
+          "span": {
+            "start": "2017-01-23",
+            "end": "2026-09-01"
+          }
+        },
+        "underlying_close_to_close": {
+          "label": "underlying_close_to_close",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 0.000553858948743671,
+          "std_daily": 0.010402472354507617,
+          "rho_hat": -0.006317383977325344,
+          "rho_se": 0.01928433196350193,
+          "rho_z": -0.3275915385236991,
+          "rho_sign": "negative",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 0.10743598867494959,
+          "ljung_box_p": 0.7430823239519389,
+          "sr_daily_total": 0.05324301087939656,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.05324301087939656,
+          "sr_annual": 0.8452065950351383,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.059560394856721904,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.0379841230572744,
+              "sr_annual": 0.602979260270535,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.044301507034599744
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        }
+      }
+    },
+    {
+      "symbol": "USO",
+      "strategy": "trend_following",
+      "asset_class": "us_equity",
+      "params": {
+        "fast_period": 20,
+        "slow_period": 100,
+        "trail_atr_mult": 3.0,
+        "allow_short": false
+      },
+      "slippage_pct": 0.0005,
+      "timeframe_minutes": 1440,
+      "bars": {
+        "n": 2690,
+        "start": "2016-01-04",
+        "end": "2026-09-15"
+      },
+      "trades": 14,
+      "episodes": 14,
+      "position_open_at_end": false,
+      "days_in_trade": 977,
+      "days_flat": 1712,
+      "share_of_days_in_trade": 0.36333209371513575,
+      "mean_episode_days": 69.78571428571429,
+      "max_abs_return_on_untraded_days": 0.0,
+      "in_trade_sr_identity": {
+        "sr_daily_all_days_total": 0.04382528261127638,
+        "share_of_days_in_trade": 0.36333209371513575,
+        "sr_daily_in_trade_implied": 0.07270643401598018,
+        "sr_daily_in_trade_actual": 0.07307457967800987,
+        "relative_deviation": 0.005063453695841834,
+        "note": "SR_in_trade ~= SR_all_days / sqrt(share_in_trade) because flat days are exact zeros; the residual is the entry-bar days, which carry slippage but are excluded from the in-trade series."
+      },
+      "series": {
+        "strategy_all_days": {
+          "label": "strategy_all_days",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 8.373762493361811e-05,
+          "std_daily": 0.001910715001574734,
+          "rho_hat": 0.0090554079846511,
+          "rho_se": 0.01928433196350193,
+          "rho_z": 0.46957333040053556,
+          "rho_sign": "positive",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 0.22074520538307488,
+          "ljung_box_p": 0.6384726949872966,
+          "sr_daily_total": 0.04382528261127638,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.04382528261127638,
+          "sr_annual": 0.6957047935593641,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.03476987462662528,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": -0.03924841419821104,
+              "sr_annual": -0.6230492599327377,
+              "clears_hurdle": true,
+              "margin_rho_minus_sr": 0.04830382218286214
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        },
+        "strategy_in_trade": {
+          "label": "strategy_in_trade",
+          "n": 977,
+          "n_pairs": 963,
+          "mean_daily": 0.0002313182137056304,
+          "std_daily": 0.00316550864507046,
+          "rho_hat": 0.004105047081496582,
+          "rho_se": 0.03220783132004154,
+          "rho_z": 0.1274549360590506,
+          "rho_sign": "positive",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 0.016295367457049747,
+          "ljung_box_p": 0.8984233412192613,
+          "sr_daily_total": 0.07307457967800987,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.07307457967800987,
+          "sr_annual": 1.160022989931531,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.06896953259651328,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.0229309293116323,
+              "sr_annual": 0.36401721774108364,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.018825882230135718
+            }
+          ],
+          "n_paired_observations": 977,
+          "rho_naive_concat": 0.0007415740205156399,
+          "span": {
+            "start": "2016-01-07",
+            "end": "2026-07-28"
+          }
+        },
+        "underlying_close_to_close": {
+          "label": "underlying_close_to_close",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 0.0005472991284781073,
+          "std_daily": 0.025076490190476784,
+          "rho_hat": 0.041481045455676484,
+          "rho_se": 0.01928433196350193,
+          "rho_z": 2.151023200294658,
+          "rho_sign": "positive",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 4.632064760000744,
+          "ljung_box_p": 0.03137977818694463,
+          "sr_daily_total": 0.021825188625717376,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.021825188625717376,
+          "sr_annual": 0.34646412852434244,
+          "clears_hurdle": true,
+          "margin_rho_minus_sr": 0.019655856829959108,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.01549534910174607,
+              "sr_annual": 0.24598104120808917,
+              "clears_hurdle": true,
+              "margin_rho_minus_sr": 0.025985696353930415
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        }
+      }
+    },
+    {
+      "symbol": "VOO",
+      "strategy": "turn_of_month",
+      "asset_class": "us_equity",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 5
+      },
+      "slippage_pct": 0.0001,
+      "timeframe_minutes": 1440,
+      "bars": {
+        "n": 2690,
+        "start": "2016-01-04",
+        "end": "2026-09-15"
+      },
+      "trades": 137,
+      "episodes": 137,
+      "position_open_at_end": false,
+      "days_in_trade": 870,
+      "days_flat": 1819,
+      "share_of_days_in_trade": 0.32354034957233174,
+      "mean_episode_days": 6.350364963503649,
+      "max_abs_return_on_untraded_days": 0.0,
+      "in_trade_sr_identity": {
+        "sr_daily_all_days_total": 0.05085829407580869,
+        "share_of_days_in_trade": 0.32354034957233174,
+        "sr_daily_in_trade_implied": 0.0894123611190886,
+        "sr_daily_in_trade_actual": 0.09136079404166993,
+        "relative_deviation": 0.021791538644038346,
+        "note": "SR_in_trade ~= SR_all_days / sqrt(share_in_trade) because flat days are exact zeros; the residual is the entry-bar days, which carry slippage but are excluded from the in-trade series."
+      },
+      "series": {
+        "strategy_all_days": {
+          "label": "strategy_all_days",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 7.828015766725652e-05,
+          "std_daily": 0.00153918174193128,
+          "rho_hat": 0.028683625333343284,
+          "rho_se": 0.01928433196350193,
+          "rho_z": 1.4874057025999512,
+          "rho_sign": "positive",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 2.2148448934618177,
+          "ljung_box_p": 0.13668879909103315,
+          "sr_daily_total": 0.05085829407580869,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.05085829407580869,
+          "sr_annual": 0.807350389377476,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.022174668742465407,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": -0.052268032339025806,
+              "sr_annual": -0.8297292905264637,
+              "clears_hurdle": true,
+              "margin_rho_minus_sr": 0.08095165767236909
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        },
+        "strategy_in_trade": {
+          "label": "strategy_in_trade",
+          "n": 870,
+          "n_pairs": 733,
+          "mean_daily": 0.00024660582701326554,
+          "std_daily": 0.002699252229580972,
+          "rho_hat": 0.0272843383775172,
+          "rho_se": 0.03691067352627811,
+          "rho_z": 0.7391991467750498,
+          "rho_sign": "positive",
+          "rho_significant_5pct": false,
+          "ljung_box_q_lag1": 0.5486517307563709,
+          "ljung_box_p": 0.4588691200741546,
+          "sr_daily_total": 0.09136079404166993,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.09136079404166993,
+          "sr_annual": 1.4503076436939015,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.06407645566415272,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.032555560136278375,
+              "sr_annual": 0.5168034954780039,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.005271221758761175
+            }
+          ],
+          "n_paired_observations": 867,
+          "rho_naive_concat": 0.019885352868665437,
+          "span": {
+            "start": "2016-06-01",
+            "end": "2026-09-09"
+          }
+        },
+        "underlying_close_to_close": {
+          "label": "underlying_close_to_close",
+          "n": 2689,
+          "n_pairs": 2688,
+          "mean_daily": 0.000621398098335623,
+          "std_daily": 0.01109713550369943,
+          "rho_hat": -0.1215317437630698,
+          "rho_se": 0.01928433196350193,
+          "rho_z": -6.302097681842659,
+          "rho_sign": "negative",
+          "rho_significant_5pct": true,
+          "ljung_box_q_lag1": 39.76076157004854,
+          "ljung_box_p": 2.8705455836741937e-10,
+          "sr_daily_total": 0.055996261208892034,
+          "rf_annual": 0.0,
+          "rf_daily": 0.0,
+          "sr_daily": 0.055996261208892034,
+          "sr_annual": 0.8889130890488482,
+          "clears_hurdle": false,
+          "margin_rho_minus_sr": -0.17752800497196183,
+          "rf_sensitivity": [
+            {
+              "rf_annual": 0.04,
+              "rf_daily": 0.00015873015873015873,
+              "sr_daily": 0.04169255565557666,
+              "sr_annual": 0.6618488027242522,
+              "clears_hurdle": false,
+              "margin_rho_minus_sr": -0.16322429941864647
+            }
+          ],
+          "span": {
+            "start": "2016-01-05",
+            "end": "2026-09-15"
+          }
+        }
+      }
+    }
+  ],
+  "errors": {}
+}

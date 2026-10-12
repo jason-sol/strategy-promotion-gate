@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-16T11:17:25.716015+00:00",
+  "market_data_feed": "sip",
+  "equity_start": "2016-01-01",
+  "crypto_start": "2020-01-01",
+  "cutoffs": [
+    "2019-12-31",
+    "2020-12-31",
+    "2021-12-31",
+    "2022-12-31",
+    "2023-12-31",
+    "2024-12-31"
+  ],
+  "forward_days": 365,
+  "n_blocks": 16,
+  "n_folds": 4,
+  "gate": {
+    "dsr_min": 0.95,
+    "p_oos_loss_max": 0.5
+  },
+  "rows": [
+    {
+      "cutoff": "2019-12-31",
+      "symbol": "GLD",
+      "variant": "EMA 20/100 long",
+      "dsr": 0.7647923165441631,
+      "p_oos_loss": 0.1986790986790987,
+      "pbo": 0.9092463092463092,
+      "oos_sharpe": 0.7503109794587971,
+      "promoted": false,
+      "forward_sharpe": 0.0,
+      "forward_return": 0.0,
+      "forward_trades": 0,
+      "forward_exposure_bars": 0,
+      "forward_entry_signals": 0,
+      "traded": false,
+      "buy_and_hold_sharpe": 1.1372138686160569,
+      "history_bars": 1006,
+      "forward_bars": 252,
+      "first_train_bars": 201,
+      "warmup_flat_variants": [
+        "EMA 50/200 long",
+        "EMA 20/100 long"
+      ]
+    },
+    {
+      "cutoff": "2019-12-31",
+      "symbol": "VOO",
+      "variant": "TOM 2/5",
+      "dsr": 0.913863472076851,
+      "p_oos_loss": 0.06456876456876456,
+      "pbo": 0.9662781662781663,
+      "oos_sharpe": 0.6556836759041135,
+      "promoted": false,
+      "forward_sharpe": 1.2917711688101923,
+      "forward_return": 0.03980611073553586,
+      "forward_trades": 13,
+      "forward_exposure_bars": 80,
+      "forward_entry_signals": 14,
+      "traded": true,
+      "buy_and_hold_sharpe": 0.629496158766976,
+      "history_bars": 1006,
+      "forward_bars": 252,
+      "first_train_bars": 201,
+      "warmup_flat_variants": []
+    },
+    {
+      "cutoff": "2020-12-31",
+      "symbol": "SPY",
+      "variant": "TSMOM 12-1",
+      "dsr": 0.38914972646578794,
+      "p_oos_loss": 0.5254079254079254,
+      "pbo": 0.6513597513597513,
+      "oos_sharpe": -0.03423625189615337,
+      "promoted": false,
+      "forward_sharpe": 2.0804363807395436,
+      "forward_return": 0.08239132988921027,
+      "forward_trades": 0,
+      "forward_exposure_bars": 251,
+      "forward_entry_signals": 1,
+      "traded": true,
+      "buy_and_hold_sharpe": 2.1345758292222863,
+      "history_bars": 1259,
+      "forward_bars": 252,
+      "first_train_bars": 251,
+      "warmup_flat_variants": [
+        "EMA 50/200 long",
+        "TSMOM ens 6-12m",
+        "TSMOM 12-1"
+      ]
+    },
+    {
+      "cutoff": "2020-12-31",
+      "symbol": "QQQ",
+      "variant": "TSMOM ens 6-12m",
+      "dsr": 0.6876660003954029,
+      "p_oos_loss": 0.20753690753690754,
+      "pbo": 0.8196581196581196,
+      "oos_sharpe": 0.6342982572813104,
+      "promoted": false,
+      "forward_sharpe": 1.4618555756171407,
+      "forward_return": 0.07168615713093973,
+      "forward_trades": 0,
+      "forward_exposure_bars": 251,
+      "forward_entry_signals": 1,
+      "traded": true,
+      "buy_and_hold_sharpe": 1.5074580057437215,
+      "history_bars": 1259,
+      "forward_bars": 252,
+      "first_train_bars": 251,
+      "warmup_flat_variants": [
+        "EMA 50/200 long",
+        "TSMOM ens 6-12m"
+      ]
+    },
+    {
+      "cutoff": "2020-12-31",
+      "symbol": "GLD",
+      "variant": "EMA 10/50 long",
+      "dsr": 0.7979053077192099,
+      "p_oos_loss": 0.1547785547785548,
+      "pbo": 0.7406371406371406,
+      "oos_sharpe": 0.753208364477919,
+      "promoted": false,
+      "forward_sharpe": 0.17210810930147782,
+      "forward_return": 0.0035582094600008496,
+      "forward_trades": 3,
+      "forward_exposure_bars": 70,
+      "forward_entry_signals": 4,
+      "traded": true,
+      "buy_and_hold_sharpe": -0.41056736601305843,
+      "history_bars": 1259,
+      "forward_bars": 252,
+      "first_train_bars": 251,
+      "warmup_flat_variants": [
+        "EMA 50/200 long",
+        "EMA 20/100 long"
+      ]
+    },
+    {
+      "cutoff": "2020-12-31",
+      "symbol": "VOO",
+      "variant": "TOM 3/3",
+      "dsr": 0.9521842269432393,
+      "p_oos_loss": 0.002097902097902098,
+      "pbo": 0.7847707847707848,
+      "oos_sharpe": 1.0051941832274947,
+      "promoted": true,
+      "forward_sharpe": 1.5696193619417795,
+      "forward_return": 0.03673291082800789,
+      "forward_trades": 12,
+      "forward_exposure_bars": 69,
+      "forward_entry_signals": 13,
+      "traded": true,
+      "buy_and_hold_sharpe": 2.1451530816273525,
+      "history_bars": 1259,
+      "forward_bars": 252,
+      "first_train_bars": 251,
+      "warmup_flat_variants": []
+    },
+    {
+      "cutoff": "2021-12-31",
+      "symbol": "SPY",
+      "variant": "TSMOM 12-1",
+      "dsr": 0.4223515170826499,
+      "p_oos_loss": 0.27808857808857806,
+      "pbo": 0.5696192696192697,
+      "oos_sharpe": 0.43551639724678437,
+      "promoted": false,
+      "forward_sharpe": -1.7213679747357207,
+      "forward_return": -0.04362935928504863,
+      "forward_trades": 9,
+      "forward_exposure_bars": 105,
+      "forward_entry_signals": 9,
+      "traded": true,
+      "buy_and_hold_sharpe": -0.7352072115975773,
+      "history_bars": 1511,
+      "forward_bars": 251,
+      "first_train_bars": 302,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2021-12-31",
+      "symbol": "QQQ",
+      "variant": "TSMOM ens 6-12m",
+      "dsr": 0.7206980843411146,
+      "p_oos_loss": 0.15625485625485624,
+      "pbo": 0.9066045066045066,
+      "oos_sharpe": 0.4866201883126869,
+      "promoted": false,
+      "forward_sharpe": -1.952390570626121,
+      "forward_return": -0.046145009651186064,
+      "forward_trades": 8,
+      "forward_exposure_bars": 71,
+      "forward_entry_signals": 8,
+      "traded": true,
+      "buy_and_hold_sharpe": -1.0966906049930096,
+      "history_bars": 1511,
+      "forward_bars": 251,
+      "first_train_bars": 302,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2021-12-31",
+      "symbol": "GLD",
+      "variant": "EMA 10/50 long",
+      "dsr": 0.5845671866280897,
+      "p_oos_loss": 0.14933954933954935,
+      "pbo": 0.4494172494172494,
+      "oos_sharpe": 0.4705964592380838,
+      "promoted": false,
+      "forward_sharpe": 0.7419793575252427,
+      "forward_return": 0.008662549320000545,
+      "forward_trades": 0,
+      "forward_exposure_bars": 34,
+      "forward_entry_signals": 1,
+      "traded": true,
+      "buy_and_hold_sharpe": 0.1270791194423064,
+      "history_bars": 1511,
+      "forward_bars": 251,
+      "first_train_bars": 302,
+      "warmup_flat_variants": [
+        "EMA 50/200 long",
+        "EMA 20/100 long"
+      ]
+    },
+    {
+      "cutoff": "2021-12-31",
+      "symbol": "USO",
+      "variant": "EMA 20/100 long",
+      "dsr": 0.49301848946335175,
+      "p_oos_loss": 0.17381507381507383,
+      "pbo": 0.33364413364413364,
+      "oos_sharpe": 0.35311008076484296,
+      "promoted": false,
+      "forward_sharpe": 0.0,
+      "forward_return": 0.0,
+      "forward_trades": 0,
+      "forward_exposure_bars": 0,
+      "forward_entry_signals": 0,
+      "traded": false,
+      "buy_and_hold_sharpe": 0.7960880143949834,
+      "history_bars": 1511,
+      "forward_bars": 251,
+      "first_train_bars": 302,
+      "warmup_flat_variants": [
+        "EMA 20/100 long",
+        "EMA 20/100 l+s",
+        "EMA 50/200 l+s"
+      ]
+    },
+    {
+      "cutoff": "2021-12-31",
+      "symbol": "VOO",
+      "variant": "TOM 2/5",
+      "dsr": 0.9882139879903318,
+      "p_oos_loss": 0.0001554001554001554,
+      "pbo": 0.6848484848484848,
+      "oos_sharpe": 0.9641172051413252,
+      "promoted": true,
+      "forward_sharpe": -1.1663411849357086,
+      "forward_return": -0.024963230426597094,
+      "forward_trades": 12,
+      "forward_exposure_bars": 80,
+      "forward_entry_signals": 13,
+      "traded": true,
+      "buy_and_hold_sharpe": -0.7396399000737252,
+      "history_bars": 1511,
+      "forward_bars": 251,
+      "first_train_bars": 302,
+      "warmup_flat_variants": []
+    },
+    {
+      "cutoff": "2022-12-31",
+      "symbol": "SPY",
+      "variant": "RSI2<15 200sma",
+      "dsr": 0.5536003467624813,
+      "p_oos_loss": 0.31771561771561774,
+      "pbo": 0.6087024087024087,
+      "oos_sharpe": -0.20408947318690457,
+      "promoted": false,
+      "forward_sharpe": 0.22500575009180526,
+      "forward_return": 0.003817452599372384,
+      "forward_trades": 14,
+      "forward_exposure_bars": 44,
+      "forward_entry_signals": 14,
+      "traded": true,
+      "buy_and_hold_sharpe": 1.8959312380109943,
+      "history_bars": 1762,
+      "forward_bars": 250,
+      "first_train_bars": 352,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2022-12-31",
+      "symbol": "QQQ",
+      "variant": "TSMOM ens 6-12m",
+      "dsr": 0.6788374447881426,
+      "p_oos_loss": 0.19137529137529138,
+      "pbo": 0.9328671328671329,
+      "oos_sharpe": -0.0006638098533780196,
+      "promoted": false,
+      "forward_sharpe": 1.9097086049384127,
+      "forward_return": 0.057574901790001354,
+      "forward_trades": 0,
+      "forward_exposure_bars": 179,
+      "forward_entry_signals": 1,
+      "traded": true,
+      "buy_and_hold_sharpe": 2.604685784151267,
+      "history_bars": 1762,
+      "forward_bars": 250,
+      "first_train_bars": 352,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2022-12-31",
+      "symbol": "GLD",
+      "variant": "EMA 10/50 long",
+      "dsr": 0.5448434675212593,
+      "p_oos_loss": 0.10435120435120435,
+      "pbo": 0.6303030303030303,
+      "oos_sharpe": 0.749603676528187,
+      "promoted": false,
+      "forward_sharpe": -0.35995404578474843,
+      "forward_return": -0.008825559469999189,
+      "forward_trades": 3,
+      "forward_exposure_bars": 74,
+      "forward_entry_signals": 3,
+      "traded": true,
+      "buy_and_hold_sharpe": 0.9064584520061916,
+      "history_bars": 1762,
+      "forward_bars": 250,
+      "first_train_bars": 352,
+      "warmup_flat_variants": [
+        "EMA 50/200 long",
+        "EMA 20/100 long"
+      ]
+    },
+    {
+      "cutoff": "2022-12-31",
+      "symbol": "USO",
+      "variant": "EMA 20/100 long",
+      "dsr": 0.5862947459177107,
+      "p_oos_loss": 0.05182595182595182,
+      "pbo": 0.14234654234654234,
+      "oos_sharpe": 0.8715699917311341,
+      "promoted": false,
+      "forward_sharpe": 0.34361686605635317,
+      "forward_return": 0.0060124140672062065,
+      "forward_trades": 2,
+      "forward_exposure_bars": 63,
+      "forward_entry_signals": 2,
+      "traded": true,
+      "buy_and_hold_sharpe": 0.10752278040452908,
+      "history_bars": 1762,
+      "forward_bars": 250,
+      "first_train_bars": 352,
+      "warmup_flat_variants": [
+        "EMA 20/100 long",
+        "EMA 20/100 l+s",
+        "EMA 50/200 l+s"
+      ]
+    },
+    {
+      "cutoff": "2022-12-31",
+      "symbol": "VOO",
+      "variant": "TOM 3/3",
+      "dsr": 0.9733941312476468,
+      "p_oos_loss": 0.0114996114996115,
+      "pbo": 0.9451437451437451,
+      "oos_sharpe": 0.6668340627506216,
+      "promoted": true,
+      "forward_sharpe": 1.3812107995037954,
+      "forward_return": 0.026407905111777152,
+      "forward_trades": 12,
+      "forward_exposure_bars": 70,
+      "forward_entry_signals": 13,
+      "traded": true,
+      "buy_and_hold_sharpe": 1.9081447515842702,
+      "history_bars": 1762,
+      "forward_bars": 250,
+      "first_train_bars": 352,
+      "warmup_flat_variants": []
+    },
+    {
+      "cutoff": "2023-12-31",
+      "symbol": "SPY",
+      "variant": "TSMOM 12-1",
+      "dsr": 0.7338900920558,
+      "p_oos_loss": 0.3395493395493395,
+      "pbo": 0.7348096348096348,
+      "oos_sharpe": 0.2050125246810933,
+      "promoted": false,
+      "forward_sharpe": 1.8507889009400578,
+      "forward_return": 0.10635934289766036,
+      "forward_trades": 0,
+      "forward_exposure_bars": 250,
+      "forward_entry_signals": 1,
+      "traded": true,
+      "buy_and_hold_sharpe": 1.9164472196483306,
+      "history_bars": 2012,
+      "forward_bars": 251,
+      "first_train_bars": 402,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2023-12-31",
+      "symbol": "QQQ",
+      "variant": "EMA 50/200 long",
+      "dsr": 0.9441187234266593,
+      "p_oos_loss": 0.09246309246309246,
+      "pbo": 0.9334887334887335,
+      "oos_sharpe": 0.3543466920081283,
+      "promoted": false,
+      "forward_sharpe": 0.0,
+      "forward_return": 0.0,
+      "forward_trades": 0,
+      "forward_exposure_bars": 0,
+      "forward_entry_signals": 0,
+      "traded": false,
+      "buy_and_hold_sharpe": 1.5121111916881196,
+      "history_bars": 2012,
+      "forward_bars": 251,
+      "first_train_bars": 402,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2023-12-31",
+      "symbol": "BTC/USD",
+      "variant": "EMA 50/200 long",
+      "dsr": 0.9194024028685797,
+      "p_oos_loss": 0.04242424242424243,
+      "pbo": 0.5070707070707071,
+      "oos_sharpe": 0.5151538915613739,
+      "promoted": false,
+      "forward_sharpe": 0.0,
+      "forward_return": 0.0,
+      "forward_trades": 0,
+      "forward_exposure_bars": 0,
+      "forward_entry_signals": 0,
+      "traded": false,
+      "buy_and_hold_sharpe": 1.3758868020110988,
+      "history_bars": 1095,
+      "forward_bars": 365,
+      "first_train_bars": 219,
+      "warmup_flat_variants": [
+        "EMA 20/100 long",
+        "EMA 50/200 long",
+        "TSMOM ens 6-12m"
+      ]
+    },
+    {
+      "cutoff": "2023-12-31",
+      "symbol": "GLD",
+      "variant": "EMA 10/50 long",
+      "dsr": 0.5747449260501799,
+      "p_oos_loss": 0.1414141414141414,
+      "pbo": 0.6077700077700078,
+      "oos_sharpe": 0.5074127818697691,
+      "promoted": false,
+      "forward_sharpe": 1.2817121315739677,
+      "forward_return": 0.04080547065999873,
+      "forward_trades": 2,
+      "forward_exposure_bars": 64,
+      "forward_entry_signals": 2,
+      "traded": true,
+      "buy_and_hold_sharpe": 1.6317022084116644,
+      "history_bars": 2012,
+      "forward_bars": 251,
+      "first_train_bars": 402,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2023-12-31",
+      "symbol": "USO",
+      "variant": "EMA 20/100 long",
+      "dsr": 0.7013777527433045,
+      "p_oos_loss": 0.11515151515151516,
+      "pbo": 0.27964257964257966,
+      "oos_sharpe": 0.36128296836325513,
+      "promoted": false,
+      "forward_sharpe": 0.013064527913421553,
+      "forward_return": 7.679010000094522e-05,
+      "forward_trades": 2,
+      "forward_exposure_bars": 74,
+      "forward_entry_signals": 2,
+      "traded": true,
+      "buy_and_hold_sharpe": 0.6180636134164333,
+      "history_bars": 2012,
+      "forward_bars": 251,
+      "first_train_bars": 402,
+      "warmup_flat_variants": [
+        "EMA 50/200 l+s"
+      ]
+    },
+    {
+      "cutoff": "2023-12-31",
+      "symbol": "VOO",
+      "variant": "TOM 3/3",
+      "dsr": 0.9830126975015309,
+      "p_oos_loss": 0.000777000777000777,
+      "pbo": 0.9762237762237762,
+      "oos_sharpe": 0.7583973362439772,
+      "promoted": true,
+      "forward_sharpe": 0.03922014592709887,
+      "forward_return": 0.0006691850313300662,
+      "forward_trades": 13,
+      "forward_exposure_bars": 67,
+      "forward_entry_signals": 14,
+      "traded": true,
+      "buy_and_hold_sharpe": 1.9300684031987148,
+      "history_bars": 2012,
+      "forward_bars": 251,
+      "first_train_bars": 402,
+      "warmup_flat_variants": []
+    },
+    {
+      "cutoff": "2024-12-31",
+      "symbol": "SPY",
+      "variant": "TSMOM ens 6-12m",
+      "dsr": 0.8128886579961689,
+      "p_oos_loss": 0.11445221445221446,
+      "pbo": 0.7245532245532246,
+      "oos_sharpe": 0.2039610639762042,
+      "promoted": false,
+      "forward_sharpe": 1.0372042033644417,
+      "forward_return": 0.034467006535261246,
+      "forward_trades": 5,
+      "forward_exposure_bars": 236,
+      "forward_entry_signals": 6,
+      "traded": true,
+      "buy_and_hold_sharpe": 0.954842341596005,
+      "history_bars": 2264,
+      "forward_bars": 250,
+      "first_train_bars": 452,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2024-12-31",
+      "symbol": "QQQ",
+      "variant": "EMA 50/200 long",
+      "dsr": 0.950049374662822,
+      "p_oos_loss": 0.008935508935508936,
+      "pbo": 0.9516705516705517,
+      "oos_sharpe": 0.431277497563747,
+      "promoted": true,
+      "forward_sharpe": 1.5133896277268886,
+      "forward_return": 0.02064282660000094,
+      "forward_trades": 1,
+      "forward_exposure_bars": 101,
+      "forward_entry_signals": 1,
+      "traded": true,
+      "buy_and_hold_sharpe": 0.9328923274673778,
+      "history_bars": 2264,
+      "forward_bars": 250,
+      "first_train_bars": 452,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2024-12-31",
+      "symbol": "BTC/USD",
+      "variant": "EMA 50/200 long",
+      "dsr": 0.9380781068217063,
+      "p_oos_loss": 0.23473193473193474,
+      "pbo": 0.8833721833721834,
+      "oos_sharpe": 0.9933533939962912,
+      "promoted": false,
+      "forward_sharpe": 0.0,
+      "forward_return": 0.0,
+      "forward_trades": 0,
+      "forward_exposure_bars": 0,
+      "forward_entry_signals": 0,
+      "traded": false,
+      "buy_and_hold_sharpe": 0.02127967291886711,
+      "history_bars": 1461,
+      "forward_bars": 365,
+      "first_train_bars": 292,
+      "warmup_flat_variants": [
+        "EMA 20/100 long",
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2024-12-31",
+      "symbol": "GLD",
+      "variant": "EMA 10/50 long",
+      "dsr": 0.6658581162442151,
+      "p_oos_loss": 0.11165501165501165,
+      "pbo": 0.36923076923076925,
+      "oos_sharpe": 0.3736660387958469,
+      "promoted": false,
+      "forward_sharpe": 1.4665839526957754,
+      "forward_return": 0.03836129933999888,
+      "forward_trades": 1,
+      "forward_exposure_bars": 60,
+      "forward_entry_signals": 1,
+      "traded": true,
+      "buy_and_hold_sharpe": 2.543685818174917,
+      "history_bars": 2264,
+      "forward_bars": 250,
+      "first_train_bars": 452,
+      "warmup_flat_variants": [
+        "EMA 50/200 long"
+      ]
+    },
+    {
+      "cutoff": "2024-12-31",
+      "symbol": "USO",
+      "variant": "EMA 20/100 long",
+      "dsr": 0.6638926818451178,
+      "p_oos_loss": 0.08205128205128205,
+      "pbo": 0.15182595182595182,
+      "oos_sharpe": 0.6247966125637687,
+      "promoted": false,
+      "forward_sharpe": -0.2756119075430728,
+      "forward_return": -0.005108402371748921,
+      "forward_trades": 2,
+      "forward_exposure_bars": 18,
+      "forward_entry_signals": 2,
+      "traded": true,
+      "buy_and_hold_sharpe": -0.19713613177678915,
+      "history_bars": 2264,
+      "forward_bars": 250,
+      "first_train_bars": 452,
+      "warmup_flat_variants": [
+        "EMA 50/200 l+s"
+      ]
+    },
+    {
+      "cutoff": "2024-12-31",
+      "symbol": "VOO",
+      "variant": "TOM 2/5",
+      "dsr": 0.986497822419103,
+      "p_oos_loss": 0.0002331002331002331,
+      "pbo": 0.5442113442113442,
+      "oos_sharpe": 0.4387565630316471,
+      "promoted": true,
+      "forward_sharpe": -0.41903208505192585,
+      "forward_return": -0.010283803372237221,
+      "forward_trades": 14,
+      "forward_exposure_bars": 79,
+      "forward_entry_signals": 15,
+      "traded": true,
+      "buy_and_hold_sharpe": 0.9997462788096453,
+      "history_bars": 2264,
+      "forward_bars": 250,
+      "first_train_bars": 452,
+      "warmup_flat_variants": []
+    }
+  ],
+  "skipped": [
+    {
+      "cutoff": "2019-12-31",
+      "symbol": "SPY",
+      "reason": "shortest warm-up 210 bars exceeds the 201-bar first train block"
+    },
+    {
+      "cutoff": "2019-12-31",
+      "symbol": "QQQ",
+      "reason": "shortest warm-up 210 bars exceeds the 201-bar first train block"
+    },
+    {
+      "cutoff": "2019-12-31",
+      "symbol": "BTC/USD",
+      "reason": "0 history bars, CSCV needs 32"
+    },
+    {
+      "cutoff": "2019-12-31",
+      "symbol": "USO",
+      "reason": "shortest warm-up 292 bars exceeds the 201-bar first train block"
+    },
+    {
+      "cutoff": "2020-12-31",
+      "symbol": "BTC/USD",
+      "reason": "0 history bars, CSCV needs 32"
+    },
+    {
+      "cutoff": "2020-12-31",
+      "symbol": "USO",
+      "reason": "shortest warm-up 292 bars exceeds the 251-bar first train block"
+    },
+    {
+      "cutoff": "2021-12-31",
+      "symbol": "BTC/USD",
+      "reason": "shortest warm-up 200 bars exceeds the 73-bar first train block"
+    },
+    {
+      "cutoff": "2022-12-31",
+      "symbol": "BTC/USD",
+      "reason": "shortest warm-up 200 bars exceeds the 146-bar first train block"
+    }
+  ],
+  "calibration": {
+    "all_rows": {
+      "n_rows": 28,
+      "base_ceiling": 0.5,
+      "spearman": {
+        "p_oos_loss": 0.1575198027888323,
+        "dsr": -0.05872689511639392,
+        "pbo": 0.2442380217457504
+      },
+      "dsr_only": {
+        "n_pass": 6,
+        "n_fail": 22,
+        "mean_pass": 0.4863444441853213,
+        "mean_fail": 0.43484141049446223,
+        "separation": 0.05150303369085907
+      },
+      "ceilings": [
+        {
+          "ceiling": 0.05,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 22,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.43484141049446223,
+            "separation": 0.05150303369085907
+          },
+          "p_oos_loss_only": {
+            "n_pass": 7,
+            "n_fail": 21,
+            "mean_pass": 0.4168666664445611,
+            "mean_fail": 0.4555481443275319,
+            "separation": -0.03868147788297077
+          },
+          "changed": 0
+        },
+        {
+          "ceiling": 0.1,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 22,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.43484141049446223,
+            "separation": 0.05150303369085907
+          },
+          "p_oos_loss_only": {
+            "n_pass": 11,
+            "n_fail": 17,
+            "mean_pass": 0.38889479931230914,
+            "mean_fail": 0.4827491119738057,
+            "separation": -0.09385431266149658
+          },
+          "changed": 0
+        },
+        {
+          "ceiling": 0.2,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 22,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.43484141049446223,
+            "separation": 0.05150303369085907
+          },
+          "p_oos_loss_only": {
+            "n_pass": 22,
+            "n_fail": 6,
+            "mean_pass": 0.39035723015169416,
+            "mean_fail": 0.6494531054421379,
+            "separation": -0.2590958752904437
+          },
+          "changed": 0
+        },
+        {
+          "ceiling": 0.3,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 22,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.43484141049446223,
+            "separation": 0.05150303369085907
+          },
+          "p_oos_loss_only": {
+            "n_pass": 25,
+            "n_fail": 3,
+            "mean_pass": 0.3331338665687476,
+            "mean_fail": 1.3854103439238024,
+            "separation": -1.0522764773550548
+          },
+          "changed": 0
+        },
+        {
+          "ceiling": 0.5,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 22,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.43484141049446223,
+            "separation": 0.05150303369085907
+          },
+          "p_oos_loss_only": {
+            "n_pass": 27,
+            "n_fail": 1,
+            "mean_pass": 0.385338567231502,
+            "mean_fail": 2.0804363807395436,
+            "separation": -1.6950978135080417
+          },
+          "changed": 0
+        }
+      ]
+    },
+    "traded_only": {
+      "n_rows": 23,
+      "base_ceiling": 0.5,
+      "spearman": {
+        "p_oos_loss": 0.2341897233201581,
+        "dsr": -0.037549407114624504,
+        "pbo": 0.31521739130434784
+      },
+      "dsr_only": {
+        "n_pass": 6,
+        "n_fail": 17,
+        "mean_pass": 0.4863444441853213,
+        "mean_fail": 0.5627359429928335,
+        "separation": -0.07639149880751217
+      },
+      "ceilings": [
+        {
+          "ceiling": 0.05,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 17,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.5627359429928335,
+            "separation": -0.07639149880751217
+          },
+          "p_oos_loss_only": {
+            "n_pass": 6,
+            "n_fail": 17,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.5627359429928335,
+            "separation": -0.07639149880751217
+          },
+          "changed": 0
+        },
+        {
+          "ceiling": 0.1,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 17,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.5627359429928335,
+            "separation": -0.07639149880751217
+          },
+          "p_oos_loss_only": {
+            "n_pass": 9,
+            "n_fail": 14,
+            "mean_pass": 0.4753158658261556,
+            "mean_fail": 0.5861953502539069,
+            "separation": -0.11087948442775131
+          },
+          "changed": 0
+        },
+        {
+          "ceiling": 0.2,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 17,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.5627359429928335,
+            "separation": -0.07639149880751217
+          },
+          "p_oos_loss_only": {
+            "n_pass": 18,
+            "n_fail": 5,
+            "mean_pass": 0.4771032812965151,
+            "mean_fail": 0.7793437265305654,
+            "separation": -0.3022404452340503
+          },
+          "changed": 0
+        },
+        {
+          "ceiling": 0.3,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 17,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.5627359429928335,
+            "separation": -0.07639149880751217
+          },
+          "p_oos_loss_only": {
+            "n_pass": 20,
+            "n_fail": 3,
+            "mean_pass": 0.41641733321093455,
+            "mean_fail": 1.3854103439238024,
+            "separation": -0.9689930107128678
+          },
+          "changed": 0
+        },
+        {
+          "ceiling": 0.5,
+          "full": {
+            "n_pass": 6,
+            "n_fail": 17,
+            "mean_pass": 0.4863444441853213,
+            "mean_fail": 0.5627359429928335,
+            "separation": -0.07639149880751217
+          },
+          "p_oos_loss_only": {
+            "n_pass": 22,
+            "n_fail": 1,
+            "mean_pass": 0.47291551432957063,
+            "mean_fail": 2.0804363807395436,
+            "separation": -1.607520866409973
+          },
+          "changed": 0
+        }
+      ]
+    }
+  }
+}

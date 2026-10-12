@@ -1,0 +1,305 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-09-16T02:48:49.828159+00:00",
+  "market_data_feed": "sip",
+  "equity_start": "2016-01-01",
+  "crypto_start": "2020-01-01",
+  "results": [
+    {
+      "symbol": "SPY",
+      "variant": "RSI2<10 200sma",
+      "strategy": "RsiMeanReversion",
+      "params": {
+        "rsi_period": 2,
+        "entry_below": 10,
+        "regime_period": 200,
+        "exit_period": 5,
+        "stop_mult": 3.0,
+        "atr_period": 14,
+        "confirm_days": 1,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.9413289738263635,
+      "oos_sharpe": -0.1016235253727564,
+      "variant_oos": 0.7852711275827603,
+      "p_oos_loss": 0.12136752136752137,
+      "pbo": 0.5108003108003109,
+      "median_logit": -0.6931471805599454,
+      "degradation_slope": -0.7455702524624077,
+      "variant_oos_rank_mean": 0.5910385910385877,
+      "variant_is_best_share": 0.31157731157731156,
+      "variants": [
+        {
+          "variant": "RSI2<10 200sma",
+          "dsr": 0.9413289738263635,
+          "oos_sharpe": 0.7852711275827603
+        },
+        {
+          "variant": "RSI2<15 200sma",
+          "dsr": 0.9534340021592123,
+          "oos_sharpe": 0.7618073409393432
+        },
+        {
+          "variant": "RSI2<5 200sma",
+          "dsr": 0.8622229205547365,
+          "oos_sharpe": 0.7039008285182047
+        },
+        {
+          "variant": "EMA 50/200 long",
+          "dsr": 0.6767698824548443,
+          "oos_sharpe": 0.40896068885640907
+        },
+        {
+          "variant": "TSMOM ens 6-12m",
+          "dsr": 0.7312415483058305,
+          "oos_sharpe": 0.29576387676808874
+        },
+        {
+          "variant": "TSMOM 12-1",
+          "dsr": 0.6974489315696613,
+          "oos_sharpe": 0.3136845986994695
+        }
+      ],
+      "verdict": "REJECT"
+    },
+    {
+      "symbol": "QQQ",
+      "variant": "EMA 50/200 long",
+      "strategy": "TrendFollowing",
+      "params": {
+        "fast_period": 50,
+        "slow_period": 200,
+        "trail_atr_mult": 3.0,
+        "atr_period": 14,
+        "allow_short": false,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "volume_gate_mult": null,
+        "volume_gate_lookback": 20,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.9805080311635161,
+      "oos_sharpe": 0.658199921310452,
+      "variant_oos": 0.7826820135099711,
+      "p_oos_loss": 0.023310023310023312,
+      "pbo": 0.9462315462315463,
+      "median_logit": -1.9459101490553135,
+      "degradation_slope": -0.9749474520607588,
+      "variant_oos_rank_mean": 0.34436674436674436,
+      "variant_is_best_share": 0.2755244755244755,
+      "variants": [
+        {
+          "variant": "RSI2<10 200sma",
+          "dsr": 0.9826867771240615,
+          "oos_sharpe": 0.7743414312873836
+        },
+        {
+          "variant": "RSI2<15 200sma",
+          "dsr": 0.9833981752091815,
+          "oos_sharpe": 0.6847798148598148
+        },
+        {
+          "variant": "EMA 50/200 long",
+          "dsr": 0.9805080311635161,
+          "oos_sharpe": 0.7826820135099711
+        },
+        {
+          "variant": "TSMOM ens 6-12m",
+          "dsr": 0.9484754865086256,
+          "oos_sharpe": 0.7179412472416872
+        }
+      ],
+      "verdict": "PROMOTE"
+    },
+    {
+      "symbol": "BTC/USD",
+      "variant": "EMA 50/200 long",
+      "strategy": "TrendFollowing",
+      "params": {
+        "fast_period": 50,
+        "slow_period": 200,
+        "trail_atr_mult": 3.0,
+        "atr_period": 14,
+        "allow_short": false,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "volume_gate_mult": null,
+        "volume_gate_lookback": 20,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.9187623622912835,
+      "oos_sharpe": 0.030285256550497644,
+      "variant_oos": 0.6439818383763801,
+      "p_oos_loss": 0.28702408702408705,
+      "pbo": 0.8205905205905206,
+      "median_logit": -1.9459101490553135,
+      "degradation_slope": -0.8697747184217801,
+      "variant_oos_rank_mean": 0.46783216783216786,
+      "variant_is_best_share": 0.3961149961149961,
+      "variants": [
+        {
+          "variant": "EMA 10/50 long",
+          "dsr": 0.8195945152943209,
+          "oos_sharpe": 0.6106460546830556
+        },
+        {
+          "variant": "EMA 20/100 long",
+          "dsr": 0.9082486232145133,
+          "oos_sharpe": 0.6237301807709164
+        },
+        {
+          "variant": "EMA 50/200 long",
+          "dsr": 0.9187623622912835,
+          "oos_sharpe": 0.6439818383763801
+        },
+        {
+          "variant": "TSMOM ens 6-12m",
+          "dsr": 0.814443724199921,
+          "oos_sharpe": 0.2299801829463814
+        }
+      ],
+      "verdict": "REJECT"
+    },
+    {
+      "symbol": "GLD",
+      "variant": "EMA 10/50 long",
+      "strategy": "TrendFollowing",
+      "params": {
+        "fast_period": 10,
+        "slow_period": 50,
+        "trail_atr_mult": 3.0,
+        "atr_period": 14,
+        "allow_short": false,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "volume_gate_mult": null,
+        "volume_gate_lookback": 20,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.6820462334809125,
+      "oos_sharpe": 0.5222366185576697,
+      "variant_oos": 0.672358479590203,
+      "p_oos_loss": 0.050194250194250195,
+      "pbo": 0.08174048174048174,
+      "median_logit": 0.6931471805599452,
+      "degradation_slope": -0.8957633111595753,
+      "variant_oos_rank_mean": 0.6529914529915463,
+      "variant_is_best_share": 0.9591297591297592,
+      "variants": [
+        {
+          "variant": "EMA 50/200 long",
+          "dsr": 0.0006453504923411568,
+          "oos_sharpe": -0.5118798267302307
+        },
+        {
+          "variant": "EMA 20/100 long",
+          "dsr": 0.24580127042481076,
+          "oos_sharpe": 0.3611243216323788
+        },
+        {
+          "variant": "EMA 10/50 long",
+          "dsr": 0.6820462334809125,
+          "oos_sharpe": 0.672358479590203
+        }
+      ],
+      "verdict": "REJECT"
+    },
+    {
+      "symbol": "USO",
+      "variant": "EMA 20/100 long",
+      "strategy": "TrendFollowing",
+      "params": {
+        "fast_period": 20,
+        "slow_period": 100,
+        "trail_atr_mult": 3.0,
+        "atr_period": 14,
+        "allow_short": false,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "volume_gate_mult": null,
+        "volume_gate_lookback": 20,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.8768545496546815,
+      "oos_sharpe": 0.5239410034072531,
+      "variant_oos": 0.6707101812697651,
+      "p_oos_loss": 0.02035742035742036,
+      "pbo": 0.07762237762237763,
+      "median_logit": 1.0986122886681098,
+      "degradation_slope": -0.6694996238096362,
+      "variant_oos_rank_mean": 0.7299145299145299,
+      "variant_is_best_share": 0.9212121212121213,
+      "variants": [
+        {
+          "variant": "EMA 20/100 long",
+          "dsr": 0.8768545496546815,
+          "oos_sharpe": 0.6707101812697651
+        },
+        {
+          "variant": "EMA 20/100 l+s",
+          "dsr": 0.6466048987629891,
+          "oos_sharpe": 0.3966600643160527
+        },
+        {
+          "variant": "EMA 50/200 l+s",
+          "dsr": 0.08769531785557527,
+          "oos_sharpe": -0.08582280554170627
+        },
+        {
+          "variant": "TSMOM ens 6-12m",
+          "dsr": 0.535849262495043,
+          "oos_sharpe": 0.5603265300666979
+        }
+      ],
+      "verdict": "REJECT"
+    },
+    {
+      "symbol": "VOO",
+      "variant": "TOM 2/5",
+      "strategy": "TurnOfMonth",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 5,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.9860607099997736,
+      "oos_sharpe": 0.6856813124345404,
+      "variant_oos": 0.7577250670905133,
+      "p_oos_loss": 0.0002331002331002331,
+      "pbo": 0.41476301476301475,
+      "median_logit": 0.6931471805599452,
+      "degradation_slope": -0.8678038638576071,
+      "variant_oos_rank_mean": 0.5873089873090551,
+      "variant_is_best_share": 0.7926184926184926,
+      "variants": [
+        {
+          "variant": "TOM 2/3",
+          "dsr": 0.9082666112638397,
+          "oos_sharpe": 0.44190844373611016
+        },
+        {
+          "variant": "TOM 3/3",
+          "dsr": 0.9523244060429121,
+          "oos_sharpe": 0.610116413253779
+        },
+        {
+          "variant": "TOM 2/5",
+          "dsr": 0.9860607099997736,
+          "oos_sharpe": 0.7577250670905133
+        }
+      ],
+      "verdict": "PROMOTE"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-12",
+  "generated_at": "2026-10-12T02:03:36.453666+00:00",
+  "artifact": "docs/validation/validation-2026-09-16.json",
+  "artifact_generated_at": "2026-09-16T02:48:49.828159+00:00",
+  "market_data_feed": "sip",
+  "bars_truncated_before": "2026-09-16T02:48:49.828159+00:00",
+  "reproduce_tolerance": 0.01,
+  "wf_folds": 4,
+  "search_sources": [
+    "tom-grid-2026-09-04.json",
+    "trend-search-2026-09-05.json",
+    "tom-grid-2026-09-07.json",
+    "trend-search-2026-09-07.json",
+    "trend-search-2026-09-12.json",
+    "trend-search-2026-09-14.json",
+    "trend-search-2026-09-16.json"
+  ],
+  "fills_source": {
+    "file": "fills-live.csv",
+    "rows": 20,
+    "note": "read-only copy of /data/fills.csv from the live bot container, taken 2026-10-12 ~12:45 AEDT"
+  },
+  "slippage_min_sample": 20,
+  "notes": {
+    "OOS Sharpe": "walk-forward select-then-trade Sharpe, the number the gate judges: 'artifact' as recorded, 're-run' recomputed here from today's bars; a row whose two differ by more than 0.01 is footnoted as not reproducible. Annualized with sqrt(252) for every symbol, crypto included",
+    "SE / 95% CI": "bot.metrics.sharpe_standard_error (Mertens 2002, non-normal returns) on the re-run daily series; CI = re-run Sharpe +/- 1.96 SE",
+    "Variant OOS": "the validated variant's own concatenated OOS Sharpe (artifact); differs from the gate number whenever fold selection changed hands",
+    "DSR": "the validated variant's Deflated Sharpe Ratio (artifact)",
+    "OOS trades": "closed round-trips on the select-then-trade path: each fold's in-sample winner re-run over its test window; a position still open at a fold's end is not counted",
+    "Gate trials": "shortlist size the DSR deflated against (len(candidates))",
+    "Search trials": "configurations tried in a recorded search that produced the shortlist; 'not recorded' means no search file exists, not zero",
+    "Live slippage": "bot.portfolio.slippage_summary over the fills log; below 20 measured fills per symbol it is reported as a sample size only"
+  },
+  "symbols": [
+    {
+      "symbol": "SPY",
+      "validated_variant": "RSI2<10 200sma",
+      "verdict": "REJECT",
+      "reproducible": false,
+      "oos_sharpe_artifact": -0.1016235253727564,
+      "oos_sharpe_rerun": 0.12829465739282178,
+      "reproduction_note": "fold 0: exact in-sample tie between TSMOM ens 6-12m and TSMOM 12-1 (0.9921); selection kept TSMOM ens 6-12m; fold 1: winner EMA 50/200 long made no in-sample trades (selected on in-sample Sharpe 0.0000); variant OOS moved between runs: RSI2<5 200sma 0.704 -> 0.748, TSMOM ens 6-12m 0.296 -> 0.514, TSMOM 12-1 0.314 -> 0.524; variant OOS within 0.01: RSI2<10 200sma, RSI2<15 200sma, EMA 50/200 long; cause not determined \u2014 the artifact records no code SHA or bar checksum; the only bot/validation.py change since (26fcdd3) moves code without changing behaviour; revised SIP bars is the leading hypothesis.",
+      "rerun": {
+        "sharpe": 0.12829465739282178,
+        "sharpe_se": 0.3456004782829478,
+        "sharpe_ci_low": -0.549082280041756,
+        "sharpe_ci_high": 0.8056715948273995,
+        "trades": 25
+      },
+      "variant_oos": 0.7852711275827603,
+      "dsr": 0.9413289738263635,
+      "gate_trials": 6,
+      "search_trials": null,
+      "live_variant": "RSI2<10 200sma",
+      "live_status": "enabled by override",
+      "slippage": "insufficient sample (n=4)"
+    },
+    {
+      "symbol": "QQQ",
+      "validated_variant": "EMA 50/200 long",
+      "verdict": "PROMOTE",
+      "reproducible": true,
+      "oos_sharpe_artifact": 0.658199921310452,
+      "oos_sharpe_rerun": 0.6568772869180727,
+      "reproduction_note": null,
+      "rerun": {
+        "sharpe": 0.6568772869180727,
+        "sharpe_se": 0.35158324251770695,
+        "sharpe_ci_low": -0.032225868416632886,
+        "sharpe_ci_high": 1.3459804422527784,
+        "trades": 35
+      },
+      "variant_oos": 0.7826820135099711,
+      "dsr": 0.9805080311635161,
+      "gate_trials": 4,
+      "search_trials": null,
+      "live_variant": "RSI2<10 200sma",
+      "live_status": "symbol PROMOTE; live variant not the selected one (owner decision)",
+      "slippage": "insufficient sample (n=7)"
+    },
+    {
+      "symbol": "BTC/USD",
+      "validated_variant": "EMA 50/200 long",
+      "verdict": "REJECT",
+      "reproducible": true,
+      "oos_sharpe_artifact": 0.030285256550497644,
+      "oos_sharpe_rerun": 0.03265818489942831,
+      "reproduction_note": null,
+      "rerun": {
+        "sharpe": 0.03265818489942831,
+        "sharpe_se": 0.38972277334571603,
+        "sharpe_ci_low": -0.7311984508581751,
+        "sharpe_ci_high": 0.7965148206570317,
+        "trades": 11
+      },
+      "variant_oos": 0.6439818383763801,
+      "dsr": 0.9187623622912835,
+      "gate_trials": 4,
+      "search_trials": null,
+      "live_variant": "EMA 20/100 long",
+      "live_status": "enabled by override",
+      "slippage": "no local sample"
+    },
+    {
+      "symbol": "GLD",
+      "validated_variant": "EMA 10/50 long",
+      "verdict": "REJECT",
+      "reproducible": true,
+      "oos_sharpe_artifact": 0.5222366185576697,
+      "oos_sharpe_rerun": 0.5222366185576697,
+      "reproduction_note": null,
+      "rerun": {
+        "sharpe": 0.5222366185576697,
+        "sharpe_se": 0.34812743328916723,
+        "sharpe_ci_low": -0.16009315068909813,
+        "sharpe_ci_high": 1.2045663878044375,
+        "trades": 19
+      },
+      "variant_oos": 0.672358479590203,
+      "dsr": 0.6820462334809125,
+      "gate_trials": 3,
+      "search_trials": null,
+      "live_variant": "EMA 10/50 long",
+      "live_status": "enabled by override",
+      "slippage": "insufficient sample (n=1)"
+    },
+    {
+      "symbol": "USO",
+      "validated_variant": "EMA 20/100 long",
+      "verdict": "REJECT",
+      "reproducible": true,
+      "oos_sharpe_artifact": 0.5239410034072531,
+      "oos_sharpe_rerun": 0.5239410034072531,
+      "reproduction_note": null,
+      "rerun": {
+        "sharpe": 0.5239410034072531,
+        "sharpe_se": 0.3409959358340758,
+        "sharpe_ci_low": -0.14441103082753537,
+        "sharpe_ci_high": 1.1922930376420418,
+        "trades": 13
+      },
+      "variant_oos": 0.6707101812697651,
+      "dsr": 0.8768545496546815,
+      "gate_trials": 4,
+      "search_trials": 390,
+      "live_variant": "EMA 20/100 long",
+      "live_status": "enabled by override",
+      "slippage": "insufficient sample (n=1)"
+    },
+    {
+      "symbol": "VOO",
+      "validated_variant": "TOM 2/5",
+      "verdict": "PROMOTE",
+      "reproducible": true,
+      "oos_sharpe_artifact": 0.6856813124345404,
+      "oos_sharpe_rerun": 0.6872131857503097,
+      "reproduction_note": null,
+      "rerun": {
+        "sharpe": 0.6872131857503097,
+        "sharpe_se": 0.34842306339224877,
+        "sharpe_ci_low": 0.00430398150150213,
+        "sharpe_ci_high": 1.3701223899991173,
+        "trades": 112
+      },
+      "variant_oos": 0.7577250670905133,
+      "dsr": 0.9860607099997736,
+      "gate_trials": 3,
+      "search_trials": 35,
+      "live_variant": "TOM 2/5",
+      "live_status": "PROMOTE",
+      "slippage": "insufficient sample (n=6)"
+    }
+  ]
+}

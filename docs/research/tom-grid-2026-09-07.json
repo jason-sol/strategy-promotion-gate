@@ -1,0 +1,778 @@
+{
+  "generated_at": "2026-09-07T06:16:20.493489+00:00",
+  "symbol": "VOO",
+  "market_data_feed": "sip",
+  "equity_start": "2016-01-01",
+  "n_trials": 35,
+  "n_blocks": 16,
+  "n_folds": 4,
+  "field": {
+    "name": "turn-of-month",
+    "headline_label": "TOM 2/5",
+    "axes": [
+      "entry_window_bdays",
+      "exit_day_of_month"
+    ]
+  },
+  "grid": {
+    "entry_window_bdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "exit_day_of_month": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "cells": [
+    {
+      "label": "TOM 1/1",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 1,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.5319772890114463,
+      "dsr": 0.6751582597981727,
+      "oos_sharpe": 0.5632913820316788,
+      "max_dd": 0.022182774125594662,
+      "oos_rank_mean": 0.3009923409923491,
+      "is_best_share": 0.024864024864024864,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/2",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 2,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.561828284302938,
+      "dsr": 0.7054902260915779,
+      "oos_sharpe": 0.6378517562997689,
+      "max_dd": 0.02663194196654106,
+      "oos_rank_mean": 0.27939837939838363,
+      "is_best_share": 0.0027195027195027195,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/3",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 3,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.6625218856217515,
+      "dsr": 0.8064372768855831,
+      "oos_sharpe": 0.6325500256461957,
+      "max_dd": 0.02911313171174368,
+      "oos_rank_mean": 0.3964524364524344,
+      "is_best_share": 0.007847707847707847,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/4",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 4,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8637486045079926,
+      "dsr": 0.9343020081902478,
+      "oos_sharpe": 0.78148756271514,
+      "max_dd": 0.028030825245862978,
+      "oos_rank_mean": 0.6273104673104836,
+      "is_best_share": 0.06985236985236985,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/5",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 5,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.922714417767592,
+      "dsr": 0.9530372808414017,
+      "oos_sharpe": 0.9382119576999269,
+      "max_dd": 0.03236535921885131,
+      "oos_rank_mean": 0.7089843489843595,
+      "is_best_share": 0.037606837606837605,
+      "passes": true
+    },
+    {
+      "label": "TOM 1/6",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 6,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 1.01856545041873,
+      "dsr": 0.9768320751763291,
+      "oos_sharpe": 0.9929177277702703,
+      "max_dd": 0.03367888283037945,
+      "oos_rank_mean": 0.8297391497392389,
+      "is_best_share": 0.27226107226107227,
+      "passes": true
+    },
+    {
+      "label": "TOM 1/7",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 7,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.9495041053303617,
+      "dsr": 0.961482402653743,
+      "oos_sharpe": 0.9627726344439529,
+      "max_dd": 0.036649072356061185,
+      "oos_rank_mean": 0.7289133089133292,
+      "is_best_share": 0.1041958041958042,
+      "passes": true
+    },
+    {
+      "label": "TOM 2/1",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 1,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.3549506962388495,
+      "dsr": 0.4517380708216361,
+      "oos_sharpe": 0.2950108805687121,
+      "max_dd": 0.03407525484585461,
+      "oos_rank_mean": 0.12400932400932613,
+      "is_best_share": 0.0003885003885003885,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/2",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 2,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.42932679756277137,
+      "dsr": 0.5472769734730436,
+      "oos_sharpe": 0.42744709594928526,
+      "max_dd": 0.03255907335237229,
+      "oos_rank_mean": 0.15146631146631054,
+      "is_best_share": 0.0003108003108003108,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/3",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 3,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.5320846347266984,
+      "dsr": 0.6735239428883966,
+      "oos_sharpe": 0.435610105944496,
+      "max_dd": 0.03507968131229966,
+      "oos_rank_mean": 0.2308691308691258,
+      "is_best_share": 0.0,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/4",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 4,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.754339746150802,
+      "dsr": 0.8776472576833859,
+      "oos_sharpe": 0.6215928235246032,
+      "max_dd": 0.028957848551127485,
+      "oos_rank_mean": 0.48642468642468745,
+      "is_best_share": 0.0,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/5",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 5,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8246315690265034,
+      "dsr": 0.9159116665669915,
+      "oos_sharpe": 0.7725479447254171,
+      "max_dd": 0.032817965070076394,
+      "oos_rank_mean": 0.582628482628487,
+      "is_best_share": 0.0012432012432012432,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/6",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 6,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.9152478066029369,
+      "dsr": 0.9530175646940822,
+      "oos_sharpe": 0.8273631604097794,
+      "max_dd": 0.03574908837039459,
+      "oos_rank_mean": 0.7198690198690434,
+      "is_best_share": 0.0466977466977467,
+      "passes": true
+    },
+    {
+      "label": "TOM 2/7",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 7,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8736272231421035,
+      "dsr": 0.9379711726968843,
+      "oos_sharpe": 0.8243558096485314,
+      "max_dd": 0.045000932748725186,
+      "oos_rank_mean": 0.6426995226995307,
+      "is_best_share": 0.017793317793317793,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/1",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 1,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.5070049237597882,
+      "dsr": 0.6448596861706335,
+      "oos_sharpe": 0.5206794003676407,
+      "max_dd": 0.03819965015598481,
+      "oos_rank_mean": 0.27692973692973877,
+      "is_best_share": 0.014996114996114996,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/2",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 2,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.5881672248179346,
+      "dsr": 0.7353231375772814,
+      "oos_sharpe": 0.6489796144405655,
+      "max_dd": 0.0335195115594733,
+      "oos_rank_mean": 0.3258896658896505,
+      "is_best_share": 0.006526806526806527,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/3",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 3,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.6377490233169975,
+      "dsr": 0.7848234259336838,
+      "oos_sharpe": 0.6055511700695627,
+      "max_dd": 0.05059287057984474,
+      "oos_rank_mean": 0.3672083472083423,
+      "is_best_share": 0.0016317016317016317,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/4",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 4,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8254096276526014,
+      "dsr": 0.9177486011289464,
+      "oos_sharpe": 0.7501268875861855,
+      "max_dd": 0.04759055655863387,
+      "oos_rank_mean": 0.6157864357864429,
+      "is_best_share": 0.012742812742812743,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/5",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 5,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8934456558281659,
+      "dsr": 0.9449383838399883,
+      "oos_sharpe": 0.8846907965063082,
+      "max_dd": 0.04513024980028424,
+      "oos_rank_mean": 0.7104229104229295,
+      "is_best_share": 0.07109557109557109,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/6",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 6,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.9558700594897098,
+      "dsr": 0.9643040350250247,
+      "oos_sharpe": 0.9037194934569821,
+      "max_dd": 0.049978045647849134,
+      "oos_rank_mean": 0.8214385614385821,
+      "is_best_share": 0.03947163947163947,
+      "passes": true
+    },
+    {
+      "label": "TOM 3/7",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 7,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.9044374962395821,
+      "dsr": 0.948950754136581,
+      "oos_sharpe": 0.8838585078813868,
+      "max_dd": 0.04710844801655778,
+      "oos_rank_mean": 0.7132978132978287,
+      "is_best_share": 0.03807303807303807,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/1",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 1,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.5081502695872719,
+      "dsr": 0.6460640129684126,
+      "oos_sharpe": 0.4570089483324306,
+      "max_dd": 0.04209371583861499,
+      "oos_rank_mean": 0.2672993672993705,
+      "is_best_share": 0.011965811965811967,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/2",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 2,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.6089063243284577,
+      "dsr": 0.756937310718473,
+      "oos_sharpe": 0.6166427247637554,
+      "max_dd": 0.040730855445563985,
+      "oos_rank_mean": 0.34358752358751465,
+      "is_best_share": 0.010256410256410256,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/3",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 3,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.6375683845781713,
+      "dsr": 0.7848614755230813,
+      "oos_sharpe": 0.5552243455324205,
+      "max_dd": 0.05424562755860152,
+      "oos_rank_mean": 0.35328449328448647,
+      "is_best_share": 0.002797202797202797,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/4",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 4,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8124311743635537,
+      "dsr": 0.9110492915101094,
+      "oos_sharpe": 0.7008255514927237,
+      "max_dd": 0.05209819350776412,
+      "oos_rank_mean": 0.5840870240870373,
+      "is_best_share": 0.024242424242424242,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/5",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 5,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8590620802492726,
+      "dsr": 0.9314897715255476,
+      "oos_sharpe": 0.8150310223944373,
+      "max_dd": 0.05037196972316549,
+      "oos_rank_mean": 0.6446775446775608,
+      "is_best_share": 0.03620823620823621,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/6",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 6,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.906255461596301,
+      "dsr": 0.9496630021448127,
+      "oos_sharpe": 0.8408813482227009,
+      "max_dd": 0.0525934025557675,
+      "oos_rank_mean": 0.7183793983794317,
+      "is_best_share": 0.09658119658119659,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/7",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 7,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8678444176903022,
+      "dsr": 0.9353801019760366,
+      "oos_sharpe": 0.8360012737690639,
+      "max_dd": 0.04963340115315684,
+      "oos_rank_mean": 0.644371184371197,
+      "is_best_share": 0.02463092463092463,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/1",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 1,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.4267040429526221,
+      "dsr": 0.544239418785019,
+      "oos_sharpe": 0.32255356984492833,
+      "max_dd": 0.042279709920269304,
+      "oos_rank_mean": 0.14886224886224822,
+      "is_best_share": 0.0,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/2",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 2,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.48580662739567443,
+      "dsr": 0.6181637154185328,
+      "oos_sharpe": 0.4273430912363978,
+      "max_dd": 0.04608049406183479,
+      "oos_rank_mean": 0.17958263958263712,
+      "is_best_share": 0.0,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/3",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 3,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.5712256932153907,
+      "dsr": 0.7175429403589797,
+      "oos_sharpe": 0.44654198147330987,
+      "max_dd": 0.050202670260983795,
+      "oos_rank_mean": 0.2519946719946625,
+      "is_best_share": 0.0,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/4",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 4,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.7380570152358953,
+      "dsr": 0.866344571651369,
+      "oos_sharpe": 0.5786765112814218,
+      "max_dd": 0.04752373620358685,
+      "oos_rank_mean": 0.4511555111555183,
+      "is_best_share": 0.0,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/5",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 5,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8016762786718152,
+      "dsr": 0.9042092539015626,
+      "oos_sharpe": 0.7139055938700543,
+      "max_dd": 0.04908175502484169,
+      "oos_rank_mean": 0.5411721611721664,
+      "is_best_share": 0.0,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/6",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 6,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8799243495956349,
+      "dsr": 0.9405843700400929,
+      "oos_sharpe": 0.7533773734997168,
+      "max_dd": 0.05114331053010479,
+      "oos_rank_mean": 0.6748473748473874,
+      "is_best_share": 0.02206682206682207,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/7",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 7,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8198860790394853,
+      "dsr": 0.9140142009288517,
+      "oos_sharpe": 0.7244028694243382,
+      "max_dd": 0.048144723990401594,
+      "oos_rank_mean": 0.5559684759684763,
+      "is_best_share": 0.0009324009324009324,
+      "passes": false
+    }
+  ],
+  "summary": {
+    "p_oos_loss": 0.024164724164724163,
+    "pbo": 0.6083139083139083,
+    "median_logit": -0.2876820724517809,
+    "degradation_slope": -0.888231992755943,
+    "field_correlation": {
+      "mean": 0.7296782930610715,
+      "min": 0.30259832082637683
+    },
+    "select_then_trade_oos_sharpe": 0.5128728627876451,
+    "n_passing": 5,
+    "n_dsr_passing": 5,
+    "oos_loss_blocks_gate": false,
+    "n_cells": 35,
+    "is_best": {
+      "label": "TOM 1/6",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 6,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 1.01856545041873,
+      "dsr": 0.9768320751763291,
+      "oos_sharpe": 0.9929177277702703,
+      "max_dd": 0.03367888283037945,
+      "oos_rank_mean": 0.8297391497392389,
+      "is_best_share": 0.27226107226107227,
+      "passes": true,
+      "oos_rank": 1,
+      "haircut": 0.025647722648459714
+    },
+    "dsr_best": {
+      "label": "TOM 1/6",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 6,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 1.01856545041873,
+      "dsr": 0.9768320751763291,
+      "oos_sharpe": 0.9929177277702703,
+      "max_dd": 0.03367888283037945,
+      "oos_rank_mean": 0.8297391497392389,
+      "is_best_share": 0.27226107226107227,
+      "passes": true
+    },
+    "disagrees": false,
+    "headline": {
+      "label": "TOM 2/5",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 5,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "sharpe": 0.8246315690265034,
+      "dsr": 0.9159116665669915,
+      "oos_sharpe": 0.7725479447254171,
+      "max_dd": 0.032817965070076394,
+      "oos_rank_mean": 0.582628482628487,
+      "is_best_share": 0.0012432012432012432,
+      "passes": false,
+      "oos_rank": 13
+    }
+  }
+}

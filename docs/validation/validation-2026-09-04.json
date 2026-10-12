@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-04T17:07:07.286408+00:00",
+  "market_data_feed": "sip",
+  "equity_start": "2016-01-01",
+  "crypto_start": "2020-01-01",
+  "results": [
+    {
+      "symbol": "SPY",
+      "variant": "RSI2<10 200sma",
+      "strategy": "RsiMeanReversion",
+      "params": {
+        "rsi_period": 2,
+        "entry_below": 10,
+        "regime_period": 200,
+        "exit_period": 5,
+        "stop_mult": 3.0,
+        "atr_period": 14,
+        "confirm_days": 1,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.938662476149104,
+      "oos_sharpe": -0.136068702773726,
+      "variant_oos": 0.7646180684731171,
+      "pbo": 0.5898212898212898,
+      "verdict": "REJECT"
+    },
+    {
+      "symbol": "QQQ",
+      "variant": "RSI2<10 200sma",
+      "strategy": "RsiMeanReversion",
+      "params": {
+        "rsi_period": 2,
+        "entry_below": 10,
+        "regime_period": 200,
+        "exit_period": 5,
+        "stop_mult": 3.0,
+        "atr_period": 14,
+        "confirm_days": 1,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.9841057845009851,
+      "oos_sharpe": 0.6178122848130186,
+      "variant_oos": 0.7872807540430294,
+      "pbo": 0.9618492618492619,
+      "verdict": "REJECT"
+    },
+    {
+      "symbol": "BTC/USD",
+      "variant": "EMA 50/200 long",
+      "strategy": "TrendFollowing",
+      "params": {
+        "fast_period": 50,
+        "slow_period": 200,
+        "trail_atr_mult": 3.0,
+        "atr_period": 14,
+        "allow_short": false,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.9236261977924329,
+      "oos_sharpe": 0.10639035957244183,
+      "variant_oos": 0.6578019060607024,
+      "pbo": 0.7875679875679875,
+      "verdict": "REJECT"
+    },
+    {
+      "symbol": "USO",
+      "variant": "EMA 20/100 long",
+      "strategy": "TrendFollowing",
+      "params": {
+        "fast_period": 20,
+        "slow_period": 100,
+        "trail_atr_mult": 3.0,
+        "atr_period": 14,
+        "allow_short": false,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.8766713728361013,
+      "oos_sharpe": 0.5633457861440683,
+      "variant_oos": 0.709020956345376,
+      "pbo": 0.08267288267288267,
+      "verdict": "REJECT"
+    },
+    {
+      "symbol": "VOO",
+      "variant": "TOM 2/5",
+      "strategy": "TurnOfMonth",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 5,
+        "atr_period": 14,
+        "vol_gate_percentile": null,
+        "vol_gate_lookback": 20,
+        "vol_gate_rank_window": 252,
+        "stop_atr_mult": 3.0
+      },
+      "dsr": 0.9870861912815067,
+      "oos_sharpe": 0.6936827545631369,
+      "variant_oos": 0.7735217216476358,
+      "pbo": 0.406993006993007,
+      "verdict": "PROMOTE"
+    }
+  ]
+}

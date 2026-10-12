@@ -1,0 +1,3648 @@
+{
+  "generated_at": "2026-09-05T02:11:58.800250+00:00",
+  "symbol": "USO",
+  "asset_class": "US_EQUITY",
+  "slippage_pct": 0.0005,
+  "market_data_feed": "sip",
+  "equity_start": "2016-01-01",
+  "n_blocks": 16,
+  "n_folds": 4,
+  "exhaustive": {
+    "generated_at": "2026-09-05T02:11:58.800250+00:00",
+    "symbol": "USO",
+    "market_data_feed": "sip",
+    "equity_start": "2016-01-01",
+    "n_trials": 130,
+    "n_blocks": 16,
+    "n_folds": 4,
+    "field": {
+      "name": "EMA-crossover trend",
+      "headline_label": "T 20/100/3.0",
+      "axes": [
+        "fast_period",
+        "slow_period",
+        "trail_atr_mult"
+      ]
+    },
+    "grid": {
+      "fast_period": [
+        5,
+        10,
+        15,
+        20,
+        30,
+        40,
+        50
+      ],
+      "slow_period": [
+        40,
+        60,
+        80,
+        100
+      ],
+      "trail_atr_mult": [
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    "cells": [
+      {
+        "label": "T 5/40/2.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 40,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.07346334865311864,
+        "dsr": 0.17656586137827268,
+        "oos_sharpe": 0.28855112323015064,
+        "max_dd": 0.09169185332653484,
+        "passes": false
+      },
+      {
+        "label": "T 5/40/2.5",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 40,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.2234114745666009,
+        "dsr": 0.3287927017275009,
+        "oos_sharpe": 0.41709232057548773,
+        "max_dd": 0.09551889884824016,
+        "passes": false
+      },
+      {
+        "label": "T 5/40/3.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 40,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.3648231188149022,
+        "dsr": 0.507478720952661,
+        "oos_sharpe": 0.45871341236878554,
+        "max_dd": 0.0828869363364082,
+        "passes": false
+      },
+      {
+        "label": "T 5/40/3.5",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 40,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.26794150379464454,
+        "dsr": 0.38302273750944293,
+        "oos_sharpe": 0.3457827916378315,
+        "max_dd": 0.08492976762292337,
+        "passes": false
+      },
+      {
+        "label": "T 5/40/4.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 40,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.23231254658797124,
+        "dsr": 0.3394954578149636,
+        "oos_sharpe": 0.3114048362452634,
+        "max_dd": 0.07602308737268981,
+        "passes": false
+      },
+      {
+        "label": "T 10/40/2.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 40,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.28670128982276316,
+        "dsr": 0.408203634632099,
+        "oos_sharpe": 0.4378188938962315,
+        "max_dd": 0.08581636672042481,
+        "passes": false
+      },
+      {
+        "label": "T 10/40/2.5",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 40,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.37920241213215716,
+        "dsr": 0.5262386320208923,
+        "oos_sharpe": 0.5360863394110426,
+        "max_dd": 0.09240352834767618,
+        "passes": false
+      },
+      {
+        "label": "T 10/40/3.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 40,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.4987209548750909,
+        "dsr": 0.675767662817286,
+        "oos_sharpe": 0.5656078239959424,
+        "max_dd": 0.07543300936557484,
+        "passes": false
+      },
+      {
+        "label": "T 10/40/3.5",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 40,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.3785440935498372,
+        "dsr": 0.5253297605029628,
+        "oos_sharpe": 0.4294601928360092,
+        "max_dd": 0.07752254084090171,
+        "passes": false
+      },
+      {
+        "label": "T 10/40/4.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 40,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.29039857506691485,
+        "dsr": 0.41139860100993714,
+        "oos_sharpe": 0.34192573145312366,
+        "max_dd": 0.06845592538475886,
+        "passes": false
+      },
+      {
+        "label": "T 15/40/2.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 40,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.14378778359810568,
+        "dsr": 0.24315820655802578,
+        "oos_sharpe": 0.34666584405865675,
+        "max_dd": 0.08542350158499534,
+        "passes": false
+      },
+      {
+        "label": "T 15/40/2.5",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 40,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.32449179249292076,
+        "dsr": 0.4550080469428618,
+        "oos_sharpe": 0.5278862355871153,
+        "max_dd": 0.09182982619825242,
+        "passes": false
+      },
+      {
+        "label": "T 15/40/3.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 40,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.3921914511501736,
+        "dsr": 0.5430221007581567,
+        "oos_sharpe": 0.5104460175828481,
+        "max_dd": 0.09120751327056964,
+        "passes": false
+      },
+      {
+        "label": "T 15/40/3.5",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 40,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.29066083750959865,
+        "dsr": 0.4116757607812763,
+        "oos_sharpe": 0.40450843407511927,
+        "max_dd": 0.08610835205709166,
+        "passes": false
+      },
+      {
+        "label": "T 15/40/4.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 40,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.21531681188204868,
+        "dsr": 0.31965000183568015,
+        "oos_sharpe": 0.3308872728847271,
+        "max_dd": 0.07353330834064287,
+        "passes": false
+      },
+      {
+        "label": "T 20/40/2.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 40,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.4254231775421686,
+        "dsr": 0.5832802831628661,
+        "oos_sharpe": 0.6247647240238244,
+        "max_dd": 0.05959058600479206,
+        "passes": false
+      },
+      {
+        "label": "T 20/40/2.5",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 40,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.4453341927730573,
+        "dsr": 0.6105201849852125,
+        "oos_sharpe": 0.6261550108571452,
+        "max_dd": 0.06479000468836016,
+        "passes": false
+      },
+      {
+        "label": "T 20/40/3.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 40,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.46335789109421993,
+        "dsr": 0.6328472415547448,
+        "oos_sharpe": 0.5499113587741062,
+        "max_dd": 0.06825460217147028,
+        "passes": false
+      },
+      {
+        "label": "T 20/40/3.5",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 40,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.3243499752579113,
+        "dsr": 0.45496956917272174,
+        "oos_sharpe": 0.40001187182034736,
+        "max_dd": 0.07553908808082865,
+        "passes": false
+      },
+      {
+        "label": "T 20/40/4.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 40,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.2023129305984741,
+        "dsr": 0.30484943069280457,
+        "oos_sharpe": 0.2761700014031483,
+        "max_dd": 0.07061641282431508,
+        "passes": false
+      },
+      {
+        "label": "T 30/40/2.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 40,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.5964407130408494,
+        "dsr": 0.7710608432470423,
+        "oos_sharpe": 0.8068341520484915,
+        "max_dd": 0.06746907264445379,
+        "passes": false
+      },
+      {
+        "label": "T 30/40/2.5",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 40,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.5929302226447098,
+        "dsr": 0.7762129436617133,
+        "oos_sharpe": 0.7829168376437684,
+        "max_dd": 0.057439415020550055,
+        "passes": false
+      },
+      {
+        "label": "T 30/40/3.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 40,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6041001513440122,
+        "dsr": 0.78709493017265,
+        "oos_sharpe": 0.7074936000455845,
+        "max_dd": 0.0558861544257534,
+        "passes": false
+      },
+      {
+        "label": "T 30/40/3.5",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 40,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.4916497801332235,
+        "dsr": 0.6668453000256327,
+        "oos_sharpe": 0.5844224724823175,
+        "max_dd": 0.059694858990033794,
+        "passes": false
+      },
+      {
+        "label": "T 30/40/4.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 40,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.37373917623441727,
+        "dsr": 0.5190005355201104,
+        "oos_sharpe": 0.4627338525184117,
+        "max_dd": 0.05376384889664032,
+        "passes": false
+      },
+      {
+        "label": "T 5/60/2.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 60,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.2192617562872655,
+        "dsr": 0.32615831489120606,
+        "oos_sharpe": 0.438399794106046,
+        "max_dd": 0.07224673104615031,
+        "passes": false
+      },
+      {
+        "label": "T 5/60/2.5",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 60,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.3549956140155673,
+        "dsr": 0.49467410408146073,
+        "oos_sharpe": 0.5487958780899771,
+        "max_dd": 0.06692154667996963,
+        "passes": false
+      },
+      {
+        "label": "T 5/60/3.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.462890967954798,
+        "dsr": 0.6326450440776811,
+        "oos_sharpe": 0.5181950384842615,
+        "max_dd": 0.06172158114178905,
+        "passes": false
+      },
+      {
+        "label": "T 5/60/3.5",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 60,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.3653888107184361,
+        "dsr": 0.5082145658291611,
+        "oos_sharpe": 0.40446576749573876,
+        "max_dd": 0.0663694205222164,
+        "passes": false
+      },
+      {
+        "label": "T 5/60/4.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 60,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.28408620106495247,
+        "dsr": 0.4033732912364718,
+        "oos_sharpe": 0.32631829212103763,
+        "max_dd": 0.059678106164743894,
+        "passes": false
+      },
+      {
+        "label": "T 10/60/2.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 60,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.4980404289384827,
+        "dsr": 0.6696921712066706,
+        "oos_sharpe": 0.6908037072574585,
+        "max_dd": 0.050251731867439586,
+        "passes": false
+      },
+      {
+        "label": "T 10/60/2.5",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 60,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.5100685158856729,
+        "dsr": 0.6887304990412912,
+        "oos_sharpe": 0.6716794383090031,
+        "max_dd": 0.057212734068112225,
+        "passes": false
+      },
+      {
+        "label": "T 10/60/3.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5239188903010775,
+        "dsr": 0.704474266101655,
+        "oos_sharpe": 0.5862736149111045,
+        "max_dd": 0.0628398341227544,
+        "passes": false
+      },
+      {
+        "label": "T 10/60/3.5",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 60,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.4263672482548023,
+        "dsr": 0.5868163547009263,
+        "oos_sharpe": 0.4726241936971609,
+        "max_dd": 0.06742323743569412,
+        "passes": false
+      },
+      {
+        "label": "T 10/60/4.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 60,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.318968093309586,
+        "dsr": 0.4480064249547505,
+        "oos_sharpe": 0.367024539655033,
+        "max_dd": 0.061846177132097724,
+        "passes": false
+      },
+      {
+        "label": "T 15/60/2.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 60,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.5291041988369092,
+        "dsr": 0.7039802777369331,
+        "oos_sharpe": 0.6860492686130215,
+        "max_dd": 0.059099075165192194,
+        "passes": false
+      },
+      {
+        "label": "T 15/60/2.5",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 60,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.5328995233838976,
+        "dsr": 0.7140615806196835,
+        "oos_sharpe": 0.6698211652355287,
+        "max_dd": 0.0664216825117735,
+        "passes": false
+      },
+      {
+        "label": "T 15/60/3.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5564930430432594,
+        "dsr": 0.7395207311349822,
+        "oos_sharpe": 0.5905045023056378,
+        "max_dd": 0.06894295433741326,
+        "passes": false
+      },
+      {
+        "label": "T 15/60/3.5",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 60,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.44755299287458467,
+        "dsr": 0.6132487909873885,
+        "oos_sharpe": 0.47530123876787944,
+        "max_dd": 0.07454730943366672,
+        "passes": false
+      },
+      {
+        "label": "T 15/60/4.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 60,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.3200143165771663,
+        "dsr": 0.4494558581536647,
+        "oos_sharpe": 0.3514649582933709,
+        "max_dd": 0.06956408465961172,
+        "passes": false
+      },
+      {
+        "label": "T 20/60/2.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 60,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.6228439851790206,
+        "dsr": 0.7941552948336008,
+        "oos_sharpe": 0.8067603253536594,
+        "max_dd": 0.06671291894754439,
+        "passes": false
+      },
+      {
+        "label": "T 20/60/2.5",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 60,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.6173713887156316,
+        "dsr": 0.7989809641472958,
+        "oos_sharpe": 0.7710749254251861,
+        "max_dd": 0.05791574618102613,
+        "passes": false
+      },
+      {
+        "label": "T 20/60/3.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6343249147968084,
+        "dsr": 0.8144135193195043,
+        "oos_sharpe": 0.6929781797133199,
+        "max_dd": 0.0547590763919692,
+        "passes": false
+      },
+      {
+        "label": "T 20/60/3.5",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 60,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5393477446843478,
+        "dsr": 0.721069107241615,
+        "oos_sharpe": 0.5844741827345776,
+        "max_dd": 0.05842040318070307,
+        "passes": false
+      },
+      {
+        "label": "T 20/60/4.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 60,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.4170352216559234,
+        "dsr": 0.5746844768236161,
+        "oos_sharpe": 0.4652668316235496,
+        "max_dd": 0.05354943008682611,
+        "passes": false
+      },
+      {
+        "label": "T 30/60/2.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 60,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.7121057826462449,
+        "dsr": 0.857649495465759,
+        "oos_sharpe": 0.912711327993079,
+        "max_dd": 0.04024115491689495,
+        "passes": false
+      },
+      {
+        "label": "T 30/60/2.5",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 60,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.6811930063124557,
+        "dsr": 0.8510726843886411,
+        "oos_sharpe": 0.8369696391394946,
+        "max_dd": 0.0564221914726073,
+        "passes": false
+      },
+      {
+        "label": "T 30/60/3.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.7228260184863636,
+        "dsr": 0.8805494169928257,
+        "oos_sharpe": 0.7699318717172156,
+        "max_dd": 0.047080117363483276,
+        "passes": false
+      },
+      {
+        "label": "T 30/60/3.5",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 60,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.6180899949244985,
+        "dsr": 0.7994105461520327,
+        "oos_sharpe": 0.654431760526498,
+        "max_dd": 0.045140396579001596,
+        "passes": false
+      },
+      {
+        "label": "T 30/60/4.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 60,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.5430433774783565,
+        "dsr": 0.7248890317150378,
+        "oos_sharpe": 0.5906407622914345,
+        "max_dd": 0.0457979394353446,
+        "passes": false
+      },
+      {
+        "label": "T 40/60/2.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 60,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.6628291406709199,
+        "dsr": 0.8241053808108199,
+        "oos_sharpe": 0.8254347553406159,
+        "max_dd": 0.03837323363550582,
+        "passes": false
+      },
+      {
+        "label": "T 40/60/2.5",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 60,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.646586358204883,
+        "dsr": 0.8247259932349136,
+        "oos_sharpe": 0.7766167856728838,
+        "max_dd": 0.0560733086297438,
+        "passes": false
+      },
+      {
+        "label": "T 40/60/3.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6942889001058323,
+        "dsr": 0.8616737563827683,
+        "oos_sharpe": 0.7135090913134805,
+        "max_dd": 0.04673017843419214,
+        "passes": false
+      },
+      {
+        "label": "T 40/60/3.5",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 60,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5921304263395728,
+        "dsr": 0.7754803056759831,
+        "oos_sharpe": 0.6009366311159854,
+        "max_dd": 0.04488249150929935,
+        "passes": false
+      },
+      {
+        "label": "T 40/60/4.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 60,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.5120741794815752,
+        "dsr": 0.6906534514541915,
+        "oos_sharpe": 0.5326219311487901,
+        "max_dd": 0.04555450826270879,
+        "passes": false
+      },
+      {
+        "label": "T 50/60/2.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 60,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.4157932569578694,
+        "dsr": 0.5730575247503343,
+        "oos_sharpe": 0.49753577638772184,
+        "max_dd": 0.027311373153572238,
+        "passes": false
+      },
+      {
+        "label": "T 50/60/2.5",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 60,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.49099954366895876,
+        "dsr": 0.6683040174003141,
+        "oos_sharpe": 0.5741025564056618,
+        "max_dd": 0.04776393319423067,
+        "passes": false
+      },
+      {
+        "label": "T 50/60/3.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5880692120061445,
+        "dsr": 0.7734210750759853,
+        "oos_sharpe": 0.5506707393196714,
+        "max_dd": 0.04054965786148612,
+        "passes": false
+      },
+      {
+        "label": "T 50/60/3.5",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 60,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5252597561203783,
+        "dsr": 0.7068011406585701,
+        "oos_sharpe": 0.4806187695457656,
+        "max_dd": 0.040935387599610795,
+        "passes": false
+      },
+      {
+        "label": "T 50/60/4.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 60,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.45950313810152466,
+        "dsr": 0.6287984713397209,
+        "oos_sharpe": 0.4251155740072516,
+        "max_dd": 0.04116368996431041,
+        "passes": false
+      },
+      {
+        "label": "T 5/80/2.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 80,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.33713405295927207,
+        "dsr": 0.47195537857877157,
+        "oos_sharpe": 0.4926751205454424,
+        "max_dd": 0.07449562216120265,
+        "passes": false
+      },
+      {
+        "label": "T 5/80/2.5",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 80,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.4343998126831963,
+        "dsr": 0.5972079855245896,
+        "oos_sharpe": 0.5715451236801316,
+        "max_dd": 0.07953553023284488,
+        "passes": false
+      },
+      {
+        "label": "T 5/80/3.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 80,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.4792663364796808,
+        "dsr": 0.6525470021669699,
+        "oos_sharpe": 0.5181363938666591,
+        "max_dd": 0.0780174955964974,
+        "passes": false
+      },
+      {
+        "label": "T 5/80/3.5",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 80,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.38470004578200806,
+        "dsr": 0.533305764957921,
+        "oos_sharpe": 0.41235920533496545,
+        "max_dd": 0.07987720427587952,
+        "passes": false
+      },
+      {
+        "label": "T 5/80/4.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 80,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.28804929828981346,
+        "dsr": 0.40843512186275027,
+        "oos_sharpe": 0.31329220168283695,
+        "max_dd": 0.07173026595621745,
+        "passes": false
+      },
+      {
+        "label": "T 10/80/2.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 80,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.3830179256863627,
+        "dsr": 0.5303666668492876,
+        "oos_sharpe": 0.5637781077980205,
+        "max_dd": 0.06149419459407335,
+        "passes": false
+      },
+      {
+        "label": "T 10/80/2.5",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 80,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.4438192908367826,
+        "dsr": 0.6087033685317716,
+        "oos_sharpe": 0.6053744950564669,
+        "max_dd": 0.06919426530405726,
+        "passes": false
+      },
+      {
+        "label": "T 10/80/3.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 80,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.4765021284999714,
+        "dsr": 0.6488292071453694,
+        "oos_sharpe": 0.5352512125841755,
+        "max_dd": 0.06863758120751018,
+        "passes": false
+      },
+      {
+        "label": "T 10/80/3.5",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 80,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.37050779065193107,
+        "dsr": 0.5148392601179507,
+        "oos_sharpe": 0.414736617171267,
+        "max_dd": 0.07279711790674626,
+        "passes": false
+      },
+      {
+        "label": "T 10/80/4.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 80,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.26736042473468097,
+        "dsr": 0.38257948032881767,
+        "oos_sharpe": 0.31569334757313017,
+        "max_dd": 0.06692247350306113,
+        "passes": false
+      },
+      {
+        "label": "T 15/80/2.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 80,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.5739702348462009,
+        "dsr": 0.7491297319544815,
+        "oos_sharpe": 0.7503342570898677,
+        "max_dd": 0.06305287731533427,
+        "passes": false
+      },
+      {
+        "label": "T 15/80/2.5",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 80,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.570224815503932,
+        "dsr": 0.7539526249072048,
+        "oos_sharpe": 0.7179768347258977,
+        "max_dd": 0.05356869085593541,
+        "passes": false
+      },
+      {
+        "label": "T 15/80/3.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 80,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5977421057001319,
+        "dsr": 0.7812421156353386,
+        "oos_sharpe": 0.6347483750952871,
+        "max_dd": 0.05261835714597707,
+        "passes": false
+      },
+      {
+        "label": "T 15/80/3.5",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 80,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.49992830240938163,
+        "dsr": 0.6766212074705723,
+        "oos_sharpe": 0.5276313521079913,
+        "max_dd": 0.05957789049939066,
+        "passes": false
+      },
+      {
+        "label": "T 15/80/4.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 80,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.4066094229480957,
+        "dsr": 0.5614087448895193,
+        "oos_sharpe": 0.4423414918909239,
+        "max_dd": 0.05495288009083754,
+        "passes": false
+      },
+      {
+        "label": "T 20/80/2.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 80,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.6009535517288758,
+        "dsr": 0.772169903121158,
+        "oos_sharpe": 0.7971328642826716,
+        "max_dd": 0.04690335490120201,
+        "passes": false
+      },
+      {
+        "label": "T 20/80/2.5",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 80,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.6207350335362845,
+        "dsr": 0.8021634968977841,
+        "oos_sharpe": 0.7726036561237608,
+        "max_dd": 0.05202690393144671,
+        "passes": false
+      },
+      {
+        "label": "T 20/80/3.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 80,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6678940259055541,
+        "dsr": 0.8419576503903301,
+        "oos_sharpe": 0.708480122809336,
+        "max_dd": 0.044717062879739866,
+        "passes": false
+      },
+      {
+        "label": "T 20/80/3.5",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 80,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5583140409345947,
+        "dsr": 0.7413410804419118,
+        "oos_sharpe": 0.587973195988253,
+        "max_dd": 0.044619306630468314,
+        "passes": false
+      },
+      {
+        "label": "T 20/80/4.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 80,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.49253143822572054,
+        "dsr": 0.6679345150705458,
+        "oos_sharpe": 0.5339428662555873,
+        "max_dd": 0.04412712593968837,
+        "passes": false
+      },
+      {
+        "label": "T 30/80/2.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 80,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.6539182680481572,
+        "dsr": 0.8184192077517949,
+        "oos_sharpe": 0.8083569433819827,
+        "max_dd": 0.03724065311826996,
+        "passes": false
+      },
+      {
+        "label": "T 30/80/2.5",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 80,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.6391312221023073,
+        "dsr": 0.818757958933688,
+        "oos_sharpe": 0.7668441603569452,
+        "max_dd": 0.0501475163037276,
+        "passes": false
+      },
+      {
+        "label": "T 30/80/3.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 80,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6909370938264849,
+        "dsr": 0.8594562742513236,
+        "oos_sharpe": 0.7067468620306322,
+        "max_dd": 0.04308950115735466,
+        "passes": false
+      },
+      {
+        "label": "T 30/80/3.5",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 80,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5883321112708164,
+        "dsr": 0.7719304443759044,
+        "oos_sharpe": 0.5941570347996552,
+        "max_dd": 0.04318523754980108,
+        "passes": false
+      },
+      {
+        "label": "T 30/80/4.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 80,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.519290565494664,
+        "dsr": 0.6989487920329536,
+        "oos_sharpe": 0.5386486735580208,
+        "max_dd": 0.04284805267998715,
+        "passes": false
+      },
+      {
+        "label": "T 40/80/2.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 80,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.47860626323519534,
+        "dsr": 0.6518390536592873,
+        "oos_sharpe": 0.5758549427307257,
+        "max_dd": 0.027238506791206984,
+        "passes": false
+      },
+      {
+        "label": "T 40/80/2.5",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 80,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.5165073894550709,
+        "dsr": 0.6985069496643443,
+        "oos_sharpe": 0.6041183418645522,
+        "max_dd": 0.04769808700719935,
+        "passes": false
+      },
+      {
+        "label": "T 40/80/3.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 80,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6210232776429793,
+        "dsr": 0.8046631946844417,
+        "oos_sharpe": 0.5853245087406813,
+        "max_dd": 0.04054822456460272,
+        "passes": false
+      },
+      {
+        "label": "T 40/80/3.5",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 80,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5698508150488915,
+        "dsr": 0.7549296490178595,
+        "oos_sharpe": 0.5273279881403871,
+        "max_dd": 0.03602725643162219,
+        "passes": false
+      },
+      {
+        "label": "T 40/80/4.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 80,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.5009306567151512,
+        "dsr": 0.6787992763223742,
+        "oos_sharpe": 0.4685476887368025,
+        "max_dd": 0.03684096532224723,
+        "passes": false
+      },
+      {
+        "label": "T 50/80/2.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 80,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.3700410097738194,
+        "dsr": 0.5143588957020515,
+        "oos_sharpe": 0.4896827843773365,
+        "max_dd": 0.03323026400458484,
+        "passes": false
+      },
+      {
+        "label": "T 50/80/2.5",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 80,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.25179177026474286,
+        "dsr": 0.3634734236676343,
+        "oos_sharpe": 0.37342243168547495,
+        "max_dd": 0.03377806440299547,
+        "passes": false
+      },
+      {
+        "label": "T 50/80/3.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 80,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5789565963564165,
+        "dsr": 0.7639682765136692,
+        "oos_sharpe": 0.5455215679811266,
+        "max_dd": 0.0376176804084849,
+        "passes": false
+      },
+      {
+        "label": "T 50/80/3.5",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 80,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5240836972613443,
+        "dsr": 0.7051014752094478,
+        "oos_sharpe": 0.48417340024132954,
+        "max_dd": 0.033534751289324816,
+        "passes": false
+      },
+      {
+        "label": "T 50/80/4.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 80,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.456910192160845,
+        "dsr": 0.6254107984583946,
+        "oos_sharpe": 0.42712943223515487,
+        "max_dd": 0.03438340869674883,
+        "passes": false
+      },
+      {
+        "label": "T 5/100/2.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 100,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.4580596471609647,
+        "dsr": 0.6235296001507349,
+        "oos_sharpe": 0.5601208570064412,
+        "max_dd": 0.06879179375707567,
+        "passes": false
+      },
+      {
+        "label": "T 5/100/2.5",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 100,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.5210816910812143,
+        "dsr": 0.701711815568766,
+        "oos_sharpe": 0.6193115452042666,
+        "max_dd": 0.0761528937013024,
+        "passes": false
+      },
+      {
+        "label": "T 5/100/3.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 100,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5457025223157227,
+        "dsr": 0.7287501285014765,
+        "oos_sharpe": 0.5462703010035664,
+        "max_dd": 0.07803101948510449,
+        "passes": false
+      },
+      {
+        "label": "T 5/100/3.5",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 100,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.4500323492541409,
+        "dsr": 0.6166708783340146,
+        "oos_sharpe": 0.44133159385104137,
+        "max_dd": 0.08162032947556064,
+        "passes": false
+      },
+      {
+        "label": "T 5/100/4.0",
+        "params": {
+          "fast_period": 5,
+          "slow_period": 100,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.3498914179482682,
+        "dsr": 0.48804989403132687,
+        "oos_sharpe": 0.3475819894277839,
+        "max_dd": 0.07579993407630115,
+        "passes": false
+      },
+      {
+        "label": "T 10/100/2.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 100,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.4439900215950561,
+        "dsr": 0.6060235812251016,
+        "oos_sharpe": 0.5871357237691752,
+        "max_dd": 0.05430208506955103,
+        "passes": false
+      },
+      {
+        "label": "T 10/100/2.5",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 100,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.4845390508738068,
+        "dsr": 0.6588609113063699,
+        "oos_sharpe": 0.6045651559841063,
+        "max_dd": 0.05319816848981773,
+        "passes": false
+      },
+      {
+        "label": "T 10/100/3.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 100,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5385156013380247,
+        "dsr": 0.7205596047947449,
+        "oos_sharpe": 0.5528766147972133,
+        "max_dd": 0.05445170824183243,
+        "passes": false
+      },
+      {
+        "label": "T 10/100/3.5",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 100,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.4385035468348322,
+        "dsr": 0.6020711771351527,
+        "oos_sharpe": 0.4422613380252911,
+        "max_dd": 0.06041610972486278,
+        "passes": false
+      },
+      {
+        "label": "T 10/100/4.0",
+        "params": {
+          "fast_period": 10,
+          "slow_period": 100,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.3798760505824437,
+        "dsr": 0.5270235393895242,
+        "oos_sharpe": 0.3975167755779359,
+        "max_dd": 0.05570416938433553,
+        "passes": false
+      },
+      {
+        "label": "T 15/100/2.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 100,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.5407091359306897,
+        "dsr": 0.7147605724689321,
+        "oos_sharpe": 0.6798461757867353,
+        "max_dd": 0.054529469732811475,
+        "passes": false
+      },
+      {
+        "label": "T 15/100/2.5",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 100,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.5712364822028807,
+        "dsr": 0.7551064964889131,
+        "oos_sharpe": 0.6918022891386897,
+        "max_dd": 0.04798191055131007,
+        "passes": false
+      },
+      {
+        "label": "T 15/100/3.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 100,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6281092457431541,
+        "dsr": 0.8089708675401746,
+        "oos_sharpe": 0.6377659189667473,
+        "max_dd": 0.04335087361371215,
+        "passes": false
+      },
+      {
+        "label": "T 15/100/3.5",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 100,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5165492851278423,
+        "dsr": 0.6956521412422314,
+        "oos_sharpe": 0.5149476690448724,
+        "max_dd": 0.05125244287586139,
+        "passes": false
+      },
+      {
+        "label": "T 15/100/4.0",
+        "params": {
+          "fast_period": 15,
+          "slow_period": 100,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.4464102018988848,
+        "dsr": 0.6118254036746885,
+        "oos_sharpe": 0.4570960789087026,
+        "max_dd": 0.0491075152202709,
+        "passes": false
+      },
+      {
+        "label": "T 20/100/2.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 100,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.656153588650479,
+        "dsr": 0.8200074542921848,
+        "oos_sharpe": 0.8034120258160917,
+        "max_dd": 0.03814110341197585,
+        "passes": false
+      },
+      {
+        "label": "T 20/100/2.5",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 100,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.6526678483694235,
+        "dsr": 0.830108519876702,
+        "oos_sharpe": 0.7769247662495464,
+        "max_dd": 0.04808072663105256,
+        "passes": false
+      },
+      {
+        "label": "T 20/100/3.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 100,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6963535081491049,
+        "dsr": 0.8634204733401035,
+        "oos_sharpe": 0.709020956345376,
+        "max_dd": 0.04128888519209439,
+        "passes": false
+      },
+      {
+        "label": "T 20/100/3.5",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 100,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5894454412843096,
+        "dsr": 0.7731034746605518,
+        "oos_sharpe": 0.5924177158648617,
+        "max_dd": 0.04166099872124185,
+        "passes": false
+      },
+      {
+        "label": "T 20/100/4.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 100,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.5302894462269913,
+        "dsr": 0.7113374974447295,
+        "oos_sharpe": 0.5488493347817853,
+        "max_dd": 0.04187534636334611,
+        "passes": false
+      },
+      {
+        "label": "T 30/100/2.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 100,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.3843538135192582,
+        "dsr": 0.532959082536636,
+        "oos_sharpe": 0.4668028076030808,
+        "max_dd": 0.028354575952676542,
+        "passes": false
+      },
+      {
+        "label": "T 30/100/2.5",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 100,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.4699998141904015,
+        "dsr": 0.6429906277202917,
+        "oos_sharpe": 0.552553348413128,
+        "max_dd": 0.04766946224948565,
+        "passes": false
+      },
+      {
+        "label": "T 30/100/3.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 100,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5868666585247538,
+        "dsr": 0.7721949017865836,
+        "oos_sharpe": 0.54302677397532,
+        "max_dd": 0.040482477879536516,
+        "passes": false
+      },
+      {
+        "label": "T 30/100/3.5",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 100,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5346964558127426,
+        "dsr": 0.7172283998433038,
+        "oos_sharpe": 0.4845625044701124,
+        "max_dd": 0.03606750539023784,
+        "passes": false
+      },
+      {
+        "label": "T 30/100/4.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 100,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.46820916188115985,
+        "dsr": 0.6394611914689821,
+        "oos_sharpe": 0.4282614070625601,
+        "max_dd": 0.03682964253589538,
+        "passes": false
+      },
+      {
+        "label": "T 40/100/2.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 100,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.28613933235888356,
+        "dsr": 0.40549771951300073,
+        "oos_sharpe": 0.3957090912609703,
+        "max_dd": 0.03320920712901809,
+        "passes": false
+      },
+      {
+        "label": "T 40/100/2.5",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 100,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.1511469791098275,
+        "dsr": 0.24911540694451345,
+        "oos_sharpe": 0.2592215485010116,
+        "max_dd": 0.033805154435913476,
+        "passes": false
+      },
+      {
+        "label": "T 40/100/3.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 100,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5390190396382323,
+        "dsr": 0.7220798512584985,
+        "oos_sharpe": 0.49919275834380405,
+        "max_dd": 0.03767391862551406,
+        "passes": false
+      },
+      {
+        "label": "T 40/100/3.5",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 100,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.48583485151644384,
+        "dsr": 0.6607630518944069,
+        "oos_sharpe": 0.43960089522922785,
+        "max_dd": 0.033653415908928896,
+        "passes": false
+      },
+      {
+        "label": "T 40/100/4.0",
+        "params": {
+          "fast_period": 40,
+          "slow_period": 100,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.4198671165789249,
+        "dsr": 0.5787755783574915,
+        "oos_sharpe": 0.38394264462759276,
+        "max_dd": 0.034218245669596525,
+        "passes": false
+      },
+      {
+        "label": "T 50/100/2.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 100,
+          "trail_atr_mult": 2.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.0
+        },
+        "sharpe": 0.22523214633985303,
+        "dsr": 0.33076203434663687,
+        "oos_sharpe": 0.34044725987460456,
+        "max_dd": 0.024693985974460375,
+        "passes": false
+      },
+      {
+        "label": "T 50/100/2.5",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 100,
+          "trail_atr_mult": 2.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 2.5
+        },
+        "sharpe": 0.2214337396124092,
+        "dsr": 0.32697873877094685,
+        "oos_sharpe": 0.3476197591977129,
+        "max_dd": 0.024464569356419164,
+        "passes": false
+      },
+      {
+        "label": "T 50/100/3.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 100,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.5740078535089917,
+        "dsr": 0.7591964240211497,
+        "oos_sharpe": 0.5312249567780731,
+        "max_dd": 0.037055218826957725,
+        "passes": false
+      },
+      {
+        "label": "T 50/100/3.5",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 100,
+          "trail_atr_mult": 3.5,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.5
+        },
+        "sharpe": 0.5213945901108585,
+        "dsr": 0.7022873200748794,
+        "oos_sharpe": 0.4719560676596336,
+        "max_dd": 0.033067408459298675,
+        "passes": false
+      },
+      {
+        "label": "T 50/100/4.0",
+        "params": {
+          "fast_period": 50,
+          "slow_period": 100,
+          "trail_atr_mult": 4.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 4.0
+        },
+        "sharpe": 0.4560234583666244,
+        "dsr": 0.6244214729696904,
+        "oos_sharpe": 0.4188046173600697,
+        "max_dd": 0.03378193956432407,
+        "passes": false
+      }
+    ],
+    "summary": {
+      "pbo": 0.5327894327894328,
+      "select_then_trade_oos_sharpe": 0.35519857263902743,
+      "n_passing": 0,
+      "n_dsr_passing": 0,
+      "pbo_blocks_gate": true,
+      "n_cells": 130,
+      "is_best": {
+        "label": "T 30/60/3.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.7228260184863636,
+        "dsr": 0.8805494169928257,
+        "oos_sharpe": 0.7699318717172156,
+        "max_dd": 0.047080117363483276,
+        "passes": false,
+        "oos_rank": 14,
+        "haircut": -0.047105853230851924
+      },
+      "dsr_best": {
+        "label": "T 30/60/3.0",
+        "params": {
+          "fast_period": 30,
+          "slow_period": 60,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.7228260184863636,
+        "dsr": 0.8805494169928257,
+        "oos_sharpe": 0.7699318717172156,
+        "max_dd": 0.047080117363483276,
+        "passes": false
+      },
+      "disagrees": false,
+      "headline": {
+        "label": "T 20/100/3.0",
+        "params": {
+          "fast_period": 20,
+          "slow_period": 100,
+          "trail_atr_mult": 3.0,
+          "atr_period": 14,
+          "allow_short": false,
+          "vol_gate_percentile": null,
+          "vol_gate_lookback": 20,
+          "vol_gate_rank_window": 252,
+          "stop_atr_mult": 3.0
+        },
+        "sharpe": 0.6963535081491049,
+        "dsr": 0.8634204733401035,
+        "oos_sharpe": 0.709020956345376,
+        "max_dd": 0.04128888519209439,
+        "passes": false,
+        "oos_rank": 19
+      }
+    }
+  },
+  "search": {
+    "seed": 0,
+    "population": 12,
+    "generations": 5,
+    "budget": 60,
+    "mutation_rate": 0.25,
+    "gene_space": {
+      "fast": [
+        5,
+        10,
+        15,
+        20,
+        30,
+        40,
+        50
+      ],
+      "slow": [
+        40,
+        60,
+        80,
+        100
+      ],
+      "trail": [
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    "space_size": 130,
+    "unique_evals": 38,
+    "front": [
+      "T 40/80/4.0",
+      "T 40/80/2.0",
+      "T 30/80/2.0",
+      "T 30/60/2.0",
+      "T 20/100/3.0",
+      "T 40/60/2.0",
+      "T 30/60/3.0"
+    ],
+    "trace": [
+      {
+        "generation": 1,
+        "n_evaluated": 20,
+        "new_evals": 8,
+        "front_size": 6,
+        "n_trials": 20,
+        "best_dsr": 0.8995449415605151
+      },
+      {
+        "generation": 2,
+        "n_evaluated": 23,
+        "new_evals": 3,
+        "front_size": 5,
+        "n_trials": 23,
+        "best_dsr": 0.9022352646866183
+      },
+      {
+        "generation": 3,
+        "n_evaluated": 30,
+        "new_evals": 7,
+        "front_size": 5,
+        "n_trials": 30,
+        "best_dsr": 0.9016100882292427
+      },
+      {
+        "generation": 4,
+        "n_evaluated": 36,
+        "new_evals": 6,
+        "front_size": 7,
+        "n_trials": 36,
+        "best_dsr": 0.8917485778108207
+      },
+      {
+        "generation": 5,
+        "n_evaluated": 38,
+        "new_evals": 2,
+        "front_size": 7,
+        "n_trials": 38,
+        "best_dsr": 0.8951067775946232
+      }
+    ],
+    "evaluated": {
+      "generated_at": "2026-09-05T02:11:58.800250+00:00",
+      "symbol": "USO",
+      "market_data_feed": "sip",
+      "equity_start": "2016-01-01",
+      "n_trials": 38,
+      "n_blocks": 16,
+      "n_folds": 4,
+      "field": {
+        "name": "EMA-crossover trend",
+        "headline_label": "T 20/100/3.0",
+        "axes": [
+          "fast_period",
+          "slow_period",
+          "trail_atr_mult"
+        ]
+      },
+      "grid": {
+        "fast_period": [
+          5,
+          10,
+          15,
+          20,
+          30,
+          40,
+          50
+        ],
+        "slow_period": [
+          40,
+          60,
+          80,
+          100
+        ],
+        "trail_atr_mult": [
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0
+        ]
+      },
+      "cells": [
+        {
+          "label": "T 40/80/3.0",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 80,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.6210232776429793,
+          "dsr": 0.8252958280910436,
+          "oos_sharpe": null,
+          "max_dd": 0.04054822456460272,
+          "passes": false
+        },
+        {
+          "label": "T 10/60/2.0",
+          "params": {
+            "fast_period": 10,
+            "slow_period": 60,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.4980404289384827,
+          "dsr": 0.6962460889632401,
+          "oos_sharpe": null,
+          "max_dd": 0.050251731867439586,
+          "passes": false
+        },
+        {
+          "label": "T 5/40/2.0",
+          "params": {
+            "fast_period": 5,
+            "slow_period": 40,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.07346334865311864,
+          "dsr": 0.19716062576629895,
+          "oos_sharpe": null,
+          "max_dd": 0.09169185332653484,
+          "passes": false
+        },
+        {
+          "label": "T 40/80/4.0",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 80,
+            "trail_atr_mult": 4.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 4.0
+          },
+          "sharpe": 0.5009306567151512,
+          "dsr": 0.7059534211931808,
+          "oos_sharpe": 0.4685476887368025,
+          "max_dd": 0.03684096532224723,
+          "passes": false
+        },
+        {
+          "label": "T 20/80/4.0",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 80,
+            "trail_atr_mult": 4.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 4.0
+          },
+          "sharpe": 0.49253143822572054,
+          "dsr": 0.6953276047755799,
+          "oos_sharpe": null,
+          "max_dd": 0.04412712593968837,
+          "passes": false
+        },
+        {
+          "label": "T 20/100/2.5",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 100,
+            "trail_atr_mult": 2.5,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.5
+          },
+          "sharpe": 0.6526678483694235,
+          "dsr": 0.8488074514995041,
+          "oos_sharpe": null,
+          "max_dd": 0.04808072663105256,
+          "passes": false
+        },
+        {
+          "label": "T 40/80/2.0",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 80,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.47860626323519534,
+          "dsr": 0.6798772190028953,
+          "oos_sharpe": 0.5758549427307257,
+          "max_dd": 0.027238506791206984,
+          "passes": false
+        },
+        {
+          "label": "T 15/100/3.0",
+          "params": {
+            "fast_period": 15,
+            "slow_period": 100,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.6281092457431541,
+          "dsr": 0.829145186846737,
+          "oos_sharpe": null,
+          "max_dd": 0.04335087361371215,
+          "passes": false
+        },
+        {
+          "label": "T 5/100/3.5",
+          "params": {
+            "fast_period": 5,
+            "slow_period": 100,
+            "trail_atr_mult": 3.5,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.5
+          },
+          "sharpe": 0.4500323492541409,
+          "dsr": 0.6457057742792803,
+          "oos_sharpe": null,
+          "max_dd": 0.08162032947556064,
+          "passes": false
+        },
+        {
+          "label": "T 30/40/2.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 40,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.5964407130408494,
+          "dsr": 0.7927948442261863,
+          "oos_sharpe": null,
+          "max_dd": 0.06746907264445379,
+          "passes": false
+        },
+        {
+          "label": "T 5/80/2.0",
+          "params": {
+            "fast_period": 5,
+            "slow_period": 80,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.33713405295927207,
+          "dsr": 0.5021136665811026,
+          "oos_sharpe": null,
+          "max_dd": 0.07449562216120265,
+          "passes": false
+        },
+        {
+          "label": "T 15/60/3.0",
+          "params": {
+            "fast_period": 15,
+            "slow_period": 60,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.5564930430432594,
+          "dsr": 0.7638078041651218,
+          "oos_sharpe": null,
+          "max_dd": 0.06894295433741326,
+          "passes": false
+        },
+        {
+          "label": "T 40/60/3.0",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 60,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.6942889001058323,
+          "dsr": 0.877881844846871,
+          "oos_sharpe": null,
+          "max_dd": 0.04673017843419214,
+          "passes": false
+        },
+        {
+          "label": "T 40/100/2.0",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 100,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.28613933235888356,
+          "dsr": 0.43574465095917814,
+          "oos_sharpe": null,
+          "max_dd": 0.03320920712901809,
+          "passes": false
+        },
+        {
+          "label": "T 30/80/3.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 80,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.6909370938264849,
+          "dsr": 0.8758597693885308,
+          "oos_sharpe": null,
+          "max_dd": 0.04308950115735466,
+          "passes": false
+        },
+        {
+          "label": "T 30/100/3.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 100,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.5868666585247538,
+          "dsr": 0.794859054273954,
+          "oos_sharpe": null,
+          "max_dd": 0.040482477879536516,
+          "passes": false
+        },
+        {
+          "label": "T 30/100/2.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 100,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.3843538135192582,
+          "dsr": 0.5635404880638921,
+          "oos_sharpe": null,
+          "max_dd": 0.028354575952676542,
+          "passes": false
+        },
+        {
+          "label": "T 20/80/2.0",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 80,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.6009535517288758,
+          "dsr": 0.7935510469803229,
+          "oos_sharpe": null,
+          "max_dd": 0.04690335490120201,
+          "passes": false
+        },
+        {
+          "label": "T 15/80/3.5",
+          "params": {
+            "fast_period": 15,
+            "slow_period": 80,
+            "trail_atr_mult": 3.5,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.5
+          },
+          "sharpe": 0.49992830240938163,
+          "dsr": 0.7036961839185327,
+          "oos_sharpe": null,
+          "max_dd": 0.05957789049939066,
+          "passes": false
+        },
+        {
+          "label": "T 5/80/4.0",
+          "params": {
+            "fast_period": 5,
+            "slow_period": 80,
+            "trail_atr_mult": 4.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 4.0
+          },
+          "sharpe": 0.28804929828981346,
+          "dsr": 0.43855577908547305,
+          "oos_sharpe": null,
+          "max_dd": 0.07173026595621745,
+          "passes": false
+        },
+        {
+          "label": "T 40/80/2.5",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 80,
+            "trail_atr_mult": 2.5,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.5
+          },
+          "sharpe": 0.5165073894550709,
+          "dsr": 0.7251083309378639,
+          "oos_sharpe": null,
+          "max_dd": 0.04769808700719935,
+          "passes": false
+        },
+        {
+          "label": "T 30/80/2.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 80,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.6539182680481572,
+          "dsr": 0.836986689615391,
+          "oos_sharpe": 0.8083569433819827,
+          "max_dd": 0.03724065311826996,
+          "passes": false
+        },
+        {
+          "label": "T 40/100/3.0",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 100,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.5390190396382323,
+          "dsr": 0.7473869362940038,
+          "oos_sharpe": null,
+          "max_dd": 0.03767391862551406,
+          "passes": false
+        },
+        {
+          "label": "T 40/60/4.0",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 60,
+            "trail_atr_mult": 4.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 4.0
+          },
+          "sharpe": 0.5120741794815752,
+          "dsr": 0.7171784345736063,
+          "oos_sharpe": null,
+          "max_dd": 0.04555450826270879,
+          "passes": false
+        },
+        {
+          "label": "T 20/80/2.5",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 80,
+            "trail_atr_mult": 2.5,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.5
+          },
+          "sharpe": 0.6207350335362845,
+          "dsr": 0.8227736115243023,
+          "oos_sharpe": null,
+          "max_dd": 0.05202690393144671,
+          "passes": false
+        },
+        {
+          "label": "T 5/80/3.0",
+          "params": {
+            "fast_period": 5,
+            "slow_period": 80,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.4792663364796808,
+          "dsr": 0.6805452855136207,
+          "oos_sharpe": null,
+          "max_dd": 0.0780174955964974,
+          "passes": false
+        },
+        {
+          "label": "T 30/60/2.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 60,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.7121057826462449,
+          "dsr": 0.8731356345923167,
+          "oos_sharpe": 0.912711327993079,
+          "max_dd": 0.04024115491689495,
+          "passes": false
+        },
+        {
+          "label": "T 20/60/3.0",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 60,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.6343249147968084,
+          "dsr": 0.8342155425680248,
+          "oos_sharpe": null,
+          "max_dd": 0.0547590763919692,
+          "passes": false
+        },
+        {
+          "label": "T 20/100/3.0",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 100,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.6963535081491049,
+          "dsr": 0.8795012190944157,
+          "oos_sharpe": 0.709020956345376,
+          "max_dd": 0.04128888519209439,
+          "passes": false
+        },
+        {
+          "label": "T 20/60/2.5",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 60,
+            "trail_atr_mult": 2.5,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.5
+          },
+          "sharpe": 0.6173713887156316,
+          "dsr": 0.8197877792172655,
+          "oos_sharpe": null,
+          "max_dd": 0.05791574618102613,
+          "passes": false
+        },
+        {
+          "label": "T 40/60/2.0",
+          "params": {
+            "fast_period": 40,
+            "slow_period": 60,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.6628291406709199,
+          "dsr": 0.8421833147962514,
+          "oos_sharpe": 0.8254347553406159,
+          "max_dd": 0.03837323363550582,
+          "passes": false
+        },
+        {
+          "label": "T 30/60/3.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 60,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.7228260184863636,
+          "dsr": 0.8951067775946232,
+          "oos_sharpe": 0.7699318717172156,
+          "max_dd": 0.047080117363483276,
+          "passes": false
+        },
+        {
+          "label": "T 15/40/3.0",
+          "params": {
+            "fast_period": 15,
+            "slow_period": 40,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.3921914511501736,
+          "dsr": 0.573412853619033,
+          "oos_sharpe": null,
+          "max_dd": 0.09120751327056964,
+          "passes": false
+        },
+        {
+          "label": "T 15/40/2.0",
+          "params": {
+            "fast_period": 15,
+            "slow_period": 40,
+            "trail_atr_mult": 2.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 2.0
+          },
+          "sharpe": 0.14378778359810568,
+          "dsr": 0.2676738062650289,
+          "oos_sharpe": null,
+          "max_dd": 0.08542350158499534,
+          "passes": false
+        },
+        {
+          "label": "T 50/60/3.0",
+          "params": {
+            "fast_period": 50,
+            "slow_period": 60,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.5880692120061445,
+          "dsr": 0.7960165881671504,
+          "oos_sharpe": null,
+          "max_dd": 0.04054965786148612,
+          "passes": false
+        },
+        {
+          "label": "T 10/40/4.0",
+          "params": {
+            "fast_period": 10,
+            "slow_period": 40,
+            "trail_atr_mult": 4.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 4.0
+          },
+          "sharpe": 0.29039857506691485,
+          "dsr": 0.441567518079129,
+          "oos_sharpe": null,
+          "max_dd": 0.06845592538475886,
+          "passes": false
+        },
+        {
+          "label": "T 20/100/4.0",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 100,
+            "trail_atr_mult": 4.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 4.0
+          },
+          "sharpe": 0.5302894462269913,
+          "dsr": 0.736998444023123,
+          "oos_sharpe": null,
+          "max_dd": 0.04187534636334611,
+          "passes": false
+        },
+        {
+          "label": "T 10/80/3.0",
+          "params": {
+            "fast_period": 10,
+            "slow_period": 80,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.4765021284999714,
+          "dsr": 0.6768735147825218,
+          "oos_sharpe": null,
+          "max_dd": 0.06863758120751018,
+          "passes": false
+        }
+      ],
+      "summary": {
+        "pbo": 0.627039627039627,
+        "select_then_trade_oos_sharpe": 0.6126862211353064,
+        "n_passing": 0,
+        "n_dsr_passing": 0,
+        "pbo_blocks_gate": true,
+        "n_cells": 38,
+        "is_best": {
+          "label": "T 30/60/3.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 60,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.7228260184863636,
+          "dsr": 0.8951067775946232,
+          "oos_sharpe": 0.7699318717172156,
+          "max_dd": 0.047080117363483276,
+          "passes": false,
+          "oos_rank": 4,
+          "haircut": -0.047105853230851924
+        },
+        "dsr_best": {
+          "label": "T 30/60/3.0",
+          "params": {
+            "fast_period": 30,
+            "slow_period": 60,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.7228260184863636,
+          "dsr": 0.8951067775946232,
+          "oos_sharpe": 0.7699318717172156,
+          "max_dd": 0.047080117363483276,
+          "passes": false
+        },
+        "disagrees": false,
+        "headline": {
+          "label": "T 20/100/3.0",
+          "params": {
+            "fast_period": 20,
+            "slow_period": 100,
+            "trail_atr_mult": 3.0,
+            "atr_period": 14,
+            "allow_short": false,
+            "vol_gate_percentile": null,
+            "vol_gate_lookback": 20,
+            "vol_gate_rank_window": 252,
+            "stop_atr_mult": 3.0
+          },
+          "sharpe": 0.6963535081491049,
+          "dsr": 0.8795012190944157,
+          "oos_sharpe": 0.709020956345376,
+          "max_dd": 0.04128888519209439,
+          "passes": false,
+          "oos_rank": 5
+        }
+      }
+    }
+  },
+  "comparison": {
+    "front_cells": [
+      {
+        "label": "T 40/80/4.0",
+        "dsr_own": 0.7059534211931808,
+        "dsr_field": 0.6787992763223742,
+        "deflation_cost": 0.027154144870806585,
+        "sharpe": 0.5009306567151512,
+        "oos_sharpe": 0.4685476887368025,
+        "max_dd": 0.03684096532224723,
+        "on_field_front": false
+      },
+      {
+        "label": "T 40/80/2.0",
+        "dsr_own": 0.6798772190028953,
+        "dsr_field": 0.6518390536592873,
+        "deflation_cost": 0.028038165343608035,
+        "sharpe": 0.47860626323519534,
+        "oos_sharpe": 0.5758549427307257,
+        "max_dd": 0.027238506791206984,
+        "on_field_front": true
+      },
+      {
+        "label": "T 30/80/2.0",
+        "dsr_own": 0.836986689615391,
+        "dsr_field": 0.8184192077517949,
+        "deflation_cost": 0.018567481863596136,
+        "sharpe": 0.6539182680481572,
+        "oos_sharpe": 0.8083569433819827,
+        "max_dd": 0.03724065311826996,
+        "on_field_front": true
+      },
+      {
+        "label": "T 30/60/2.0",
+        "dsr_own": 0.8731356345923167,
+        "dsr_field": 0.857649495465759,
+        "deflation_cost": 0.015486139126557719,
+        "sharpe": 0.7121057826462449,
+        "oos_sharpe": 0.912711327993079,
+        "max_dd": 0.04024115491689495,
+        "on_field_front": true
+      },
+      {
+        "label": "T 20/100/3.0",
+        "dsr_own": 0.8795012190944157,
+        "dsr_field": 0.8634204733401035,
+        "deflation_cost": 0.016080745754312176,
+        "sharpe": 0.6963535081491049,
+        "oos_sharpe": 0.709020956345376,
+        "max_dd": 0.04128888519209439,
+        "on_field_front": true
+      },
+      {
+        "label": "T 40/60/2.0",
+        "dsr_own": 0.8421833147962514,
+        "dsr_field": 0.8241053808108199,
+        "deflation_cost": 0.01807793398543156,
+        "sharpe": 0.6628291406709199,
+        "oos_sharpe": 0.8254347553406159,
+        "max_dd": 0.03837323363550582,
+        "on_field_front": true
+      },
+      {
+        "label": "T 30/60/3.0",
+        "dsr_own": 0.8951067775946232,
+        "dsr_field": 0.8805494169928257,
+        "deflation_cost": 0.014557360601797464,
+        "sharpe": 0.7228260184863636,
+        "oos_sharpe": 0.7699318717172156,
+        "max_dd": 0.047080117363483276,
+        "on_field_front": true
+      }
+    ],
+    "field_front": [
+      "T 30/60/2.0",
+      "T 30/60/3.0",
+      "T 40/60/2.0",
+      "T 30/80/2.0",
+      "T 40/80/2.0",
+      "T 40/80/3.5",
+      "T 50/80/3.5",
+      "T 20/100/2.0",
+      "T 20/100/3.0",
+      "T 50/100/2.0",
+      "T 50/100/2.5",
+      "T 50/100/3.0",
+      "T 50/100/3.5"
+    ],
+    "search_front": [
+      "T 40/80/4.0",
+      "T 40/80/2.0",
+      "T 30/80/2.0",
+      "T 30/60/2.0",
+      "T 20/100/3.0",
+      "T 40/60/2.0",
+      "T 30/60/3.0"
+    ],
+    "matched": [
+      "T 40/80/2.0",
+      "T 30/80/2.0",
+      "T 30/60/2.0",
+      "T 20/100/3.0",
+      "T 40/60/2.0",
+      "T 30/60/3.0"
+    ],
+    "coverage": 0.46153846153846156,
+    "precision": 0.8571428571428571,
+    "search_pick": {
+      "label": "T 30/60/3.0",
+      "dsr_own": 0.8951067775946232,
+      "dsr_field": 0.8805494169928257
+    },
+    "field_best": {
+      "label": "T 30/60/3.0",
+      "dsr": 0.8805494169928257
+    },
+    "dsr_regret": 0.0,
+    "front_haircut": -0.09175554975638003,
+    "search_pbo": 0.627039627039627,
+    "field_pbo": 0.5327894327894328,
+    "evals": 38,
+    "field_size": 130,
+    "live_cell": {
+      "label": "T 20/100/3.0",
+      "present": true,
+      "field_size": 130,
+      "sharpe": 0.6963535081491049,
+      "dsr": 0.8634204733401035,
+      "oos_sharpe": 0.709020956345376,
+      "max_dd": 0.04128888519209439,
+      "dsr_rank": 2,
+      "oos_rank": 19,
+      "passes": false,
+      "on_front": true
+    }
+  }
+}

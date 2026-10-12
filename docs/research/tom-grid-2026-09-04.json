@@ -1,0 +1,459 @@
+{
+  "generated_at": "2026-09-04T17:14:57.746384+00:00",
+  "symbol": "VOO",
+  "market_data_feed": "sip",
+  "equity_start": "2016-01-01",
+  "n_trials": 35,
+  "n_blocks": 16,
+  "n_folds": 4,
+  "grid": {
+    "entry_window_bdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "exit_day_of_month": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "cells": [
+    {
+      "label": "TOM 1/1",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 1
+      },
+      "sharpe": 0.5319772890114463,
+      "dsr": 0.6747762409266238,
+      "oos_sharpe": 0.5632913820316788,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/2",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 2
+      },
+      "sharpe": 0.561828284302938,
+      "dsr": 0.7051315345036546,
+      "oos_sharpe": 0.6378517562997689,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/3",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 3
+      },
+      "sharpe": 0.6631467370224172,
+      "dsr": 0.8066940219134506,
+      "oos_sharpe": 0.6333059428953776,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/4",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 4
+      },
+      "sharpe": 0.8643067781221896,
+      "dsr": 0.9343934186980173,
+      "oos_sharpe": 0.7821670820255457,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/5",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 5
+      },
+      "sharpe": 0.9232231220692048,
+      "dsr": 0.9530898177655798,
+      "oos_sharpe": 0.9388453615170749,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/6",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 6
+      },
+      "sharpe": 1.0190494806274495,
+      "dsr": 0.9768576644603613,
+      "oos_sharpe": 0.9935193197046265,
+      "passes": false
+    },
+    {
+      "label": "TOM 1/7",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 7
+      },
+      "sharpe": 0.9499484626811491,
+      "dsr": 0.9615110838316594,
+      "oos_sharpe": 0.9633292677954898,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/1",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 1
+      },
+      "sharpe": 0.3549506962388495,
+      "dsr": 0.4513192607881877,
+      "oos_sharpe": 0.2950108805687121,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/2",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 2
+      },
+      "sharpe": 0.42932679756277137,
+      "dsr": 0.5468616528919327,
+      "oos_sharpe": 0.42744709594928526,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/3",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 3
+      },
+      "sharpe": 0.5326207522321267,
+      "dsr": 0.6737646462621139,
+      "oos_sharpe": 0.4362551481869982,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/4",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 4
+      },
+      "sharpe": 0.7548378439882328,
+      "dsr": 0.8777559594438593,
+      "oos_sharpe": 0.62219566048629,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/5",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 5
+      },
+      "sharpe": 0.8250959426713662,
+      "dsr": 0.9159759241871612,
+      "oos_sharpe": 0.7731214284570121,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/6",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 6
+      },
+      "sharpe": 0.9156932086281332,
+      "dsr": 0.9530528648073204,
+      "oos_sharpe": 0.8279110608839838,
+      "passes": false
+    },
+    {
+      "label": "TOM 2/7",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 7
+      },
+      "sharpe": 0.8740402892581886,
+      "dsr": 0.9380025471267028,
+      "oos_sharpe": 0.8248626960105705,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/1",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 1
+      },
+      "sharpe": 0.5070049237597882,
+      "dsr": 0.6444659843780719,
+      "oos_sharpe": 0.5206794003676407,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/2",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 2
+      },
+      "sharpe": 0.5881672248179346,
+      "dsr": 0.7349799615195445,
+      "oos_sharpe": 0.6489796144405655,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/3",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 3
+      },
+      "sharpe": 0.6382559819536047,
+      "dsr": 0.7849896093234717,
+      "oos_sharpe": 0.6061670099852698,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/4",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 4
+      },
+      "sharpe": 0.8258850474512183,
+      "dsr": 0.9178185215432135,
+      "oos_sharpe": 0.7506985812609376,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/5",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 5
+      },
+      "sharpe": 0.8938910874194984,
+      "dsr": 0.9449779237130833,
+      "oos_sharpe": 0.8852380053972724,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/6",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 6
+      },
+      "sharpe": 0.9562963048097882,
+      "dsr": 0.9643273952532656,
+      "oos_sharpe": 0.9042400398169771,
+      "passes": false
+    },
+    {
+      "label": "TOM 3/7",
+      "params": {
+        "entry_window_bdays": 3,
+        "exit_day_of_month": 7
+      },
+      "sharpe": 0.904835940282196,
+      "dsr": 0.9489726890571324,
+      "oos_sharpe": 0.8843492642824801,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/1",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 1
+      },
+      "sharpe": 0.5081502695872719,
+      "dsr": 0.6456712833706532,
+      "oos_sharpe": 0.4570089483324306,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/2",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 2
+      },
+      "sharpe": 0.6089063243284577,
+      "dsr": 0.7566087236958,
+      "oos_sharpe": 0.6166427247637554,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/3",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 3
+      },
+      "sharpe": 0.638039485288394,
+      "dsr": 0.7849945467540326,
+      "oos_sharpe": 0.5557954552583354,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/4",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 4
+      },
+      "sharpe": 0.8128696807495496,
+      "dsr": 0.9111045063651331,
+      "oos_sharpe": 0.7013589151104243,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/5",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 5
+      },
+      "sharpe": 0.8594765629443741,
+      "dsr": 0.931523925591757,
+      "oos_sharpe": 0.8155444498349183,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/6",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 6
+      },
+      "sharpe": 0.9066569029120735,
+      "dsr": 0.9496857270714198,
+      "oos_sharpe": 0.8413791404069829,
+      "passes": false
+    },
+    {
+      "label": "TOM 4/7",
+      "params": {
+        "entry_window_bdays": 4,
+        "exit_day_of_month": 7
+      },
+      "sharpe": 0.8682220723988266,
+      "dsr": 0.935398342843476,
+      "oos_sharpe": 0.8364664028374545,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/1",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 1
+      },
+      "sharpe": 0.4267040429526221,
+      "dsr": 0.5438208586880632,
+      "oos_sharpe": 0.32255356984492833,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/2",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 2
+      },
+      "sharpe": 0.48580662739567443,
+      "dsr": 0.6177633820541056,
+      "oos_sharpe": 0.4273430912363978,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/3",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 3
+      },
+      "sharpe": 0.5716533609643599,
+      "dsr": 0.7176507547001891,
+      "oos_sharpe": 0.4470628030204064,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/4",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 4
+      },
+      "sharpe": 0.7384580373034355,
+      "dsr": 0.8663934570482099,
+      "oos_sharpe": 0.5791646192999798,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/5",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 5
+      },
+      "sharpe": 0.8020571136062404,
+      "dsr": 0.9042358147450688,
+      "oos_sharpe": 0.7143748664630302,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/6",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 6
+      },
+      "sharpe": 0.8802948962344863,
+      "dsr": 0.9405990231063814,
+      "oos_sharpe": 0.753833082597389,
+      "passes": false
+    },
+    {
+      "label": "TOM 5/7",
+      "params": {
+        "entry_window_bdays": 5,
+        "exit_day_of_month": 7
+      },
+      "sharpe": 0.8202328753967466,
+      "dsr": 0.9140220113426383,
+      "oos_sharpe": 0.7248287316204728,
+      "passes": false
+    }
+  ],
+  "summary": {
+    "pbo": 0.6083139083139083,
+    "select_then_trade_oos_sharpe": 0.5134365175901591,
+    "n_passing": 0,
+    "n_dsr_passing": 5,
+    "pbo_blocks_gate": true,
+    "n_cells": 35,
+    "is_best": {
+      "label": "TOM 1/6",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 6
+      },
+      "sharpe": 1.0190494806274495,
+      "dsr": 0.9768576644603613,
+      "oos_sharpe": 0.9935193197046265,
+      "passes": false,
+      "oos_rank": 1,
+      "haircut": 0.02553016092282301
+    },
+    "dsr_best": {
+      "label": "TOM 1/6",
+      "params": {
+        "entry_window_bdays": 1,
+        "exit_day_of_month": 6
+      },
+      "sharpe": 1.0190494806274495,
+      "dsr": 0.9768576644603613,
+      "oos_sharpe": 0.9935193197046265,
+      "passes": false
+    },
+    "disagrees": false,
+    "headline": {
+      "label": "TOM 2/5",
+      "params": {
+        "entry_window_bdays": 2,
+        "exit_day_of_month": 5
+      },
+      "sharpe": 0.8250959426713662,
+      "dsr": 0.9159759241871612,
+      "oos_sharpe": 0.7731214284570121,
+      "passes": false,
+      "oos_rank": 13
+    }
+  }
+}
